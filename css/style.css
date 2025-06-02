@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.menu {
+  background-color: #42294d;
+  margin: 16px 0;
+  padding: 20px 40px;
+  border: 5px dashed #3434ff;
+}
+
+.easy {
+  background: #ffffff;
+  margin: 4px;
+}
+
+.header {
+  border: 5px solid #ffff00;
+  margin-bottom: 24px;
+}
+
+.container {
+  background-image: url("/images/flower.jpg");
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 24px auto;
+}
+
+a {
+  text-decoration: none;
+  color: #343434;
+}
+
+.ineed {
+  text-align: center;
+}
