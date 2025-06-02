@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* 컨텐츠 마다 선택사항, tab 키 눌러서 포커스 되는지 안되는지 */
+  outline-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.wrap {
+}
