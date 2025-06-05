@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NOL 인터파크</title>
+
+    <!-- swiper 에서 가져온것 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,8 +20,13 @@
     />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <!-- js 한줄씩 위에서부터 내려옴, 그래서 순서상 header 클래스 없음 -->
+    <script src="js/header.js"></script>
+
     <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/banner.css" />
+    <script src="js/banner.js"></script>
     <link
       rel="icon"
       href="//openimage.interpark.com/UI/favicon/int_favicon.ico"
@@ -216,22 +229,55 @@
           <div class="layout">
             <!-- 배너 슬라이드 -->
             <div class="banner_wrap">
+              <!-- Swiper -->
+              <div class="swiper sw_banner">
+                <div class="swiper-wrapper">
+                  <!-- API 연동 -->
+                  <!-- <div class="swiper-slide">
+                    <a href="#" class="banner_slide_item">
+                      <img src="images/s1.jpg" alt="이미지" />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="banner_slide_item">
+                      <img src="images/s2.png" alt="이미지" />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="banner_slide_item">
+                      <img src="images/s2.png" alt="이미지" />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="banner_slide_item">
+                      <img src="images/s2.png" alt="이미지" />
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="banner_slide_item">
+                      <img src="images/s1.jpg" alt="이미지" />
+                    </a>
+                  </div> -->
+                </div>
+              </div>
+
               <!-- 슬라이드 목록 -->
-              <div class="banner_slide">
+               <!-- swiper 라이브러니는 위대하다 -->
+              <!-- <div class="banner_slide">
                 <a href="#" class="banner_slide_item">
                   <img src="images/s1.jpg" alt="이미지" />
                 </a>
                 <a href="#" class="banner_slide_item">
                   <img src="images/s2.png" alt="이미지" />
                 </a>
-              </div>
+              </div> -->
               <!-- 좌측이동 버튼 -->
               <button class="banner_slide_prev">
                 <img src="images/slider_arrow.svg" alt="이전" />
               </button>
               <!-- 우측이동 버튼 -->
               <button class="banner_slide_next">
-                <img src="images/slider_arrow.svg" alt="다음">
+                <img src="images/slider_arrow.svg" alt="다음" />
               </button>
               <!-- 페이지네이션 -->
               <div class="banner_slide_pg">페이지네이션</div>

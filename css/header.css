@@ -25,6 +25,11 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.header_top_scroll {
+  padding: 0;
+}
+
 .header_top_left {
   display: flex;
   /* flex 전용 세로 정렬 */
@@ -37,6 +42,10 @@
   height: 22px;
 }
 
+.logo_hide {
+  display: none;
+}
+
 .search {
   width: 355px;
   height: 46px;
@@ -47,6 +56,12 @@
   border-radius: 23px;
   display: flex;
   align-items: center;
+}
+
+.search_scroll {
+  position: absolute;
+  left: 190px;
+  top: 8px;
 }
 
 .search form {
@@ -75,18 +90,23 @@
   height: 50px;
 }
 
+.sale_hide {
+  display: none;
+}
+
 .sale img {
   width: 100%;
   /* height: auto; */
 }
 
-img {
-}
-
 .header_top_right {
 }
+
 .header_top_left {
   display: flex;
+  position: relative;
+  align-items: center;
+  gap: 12px;
 }
 
 .link_site {
@@ -94,6 +114,10 @@ img {
   align-items: center;
   /* flex 전용 여백 */
   gap: 20px;
+}
+
+.link_site_hide {
+  display: none;
 }
 
 .link_site li {
@@ -159,6 +183,11 @@ img {
   height: 48px;
 }
 
+.height_62 {
+  /* !important 최우선 적용, 최악의 수단 */
+  height: 62px !important;
+}
+
 /* 모바일 메뉴 */
 .mobile_header {
   position: fixed;
@@ -210,4 +239,8 @@ img {
   .layout {
     max-width: 760px;
   }
+}
+
+body {
+  height: 4000px;
 }

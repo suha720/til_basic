@@ -16,6 +16,7 @@
 }
 
 .banner_slide_item {
+  display: inline-block;
   border-radius: 15px;
   overflow: hidden;
   height: 345px;
@@ -30,6 +31,7 @@
 }
 
 .banner_slide_prev {
+  z-index: 100;
   position: absolute;
   left: 0;
   top: 50%;
@@ -59,6 +61,7 @@
 }
 
 .banner_slide_next {
+  z-index: 100;
   position: absolute;
   right: 0;
   top: 50%;
@@ -83,4 +86,22 @@
 
 .banner_slide_pg {
     display: none;
+}
+
+@media all and (max-width: 1280px) {
+  .banner_slide_item {
+    height: 275px;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .banner_slide_item {
+    height: 202px;
+  }
+}
+
+@media all and (max-width: 760px) {
+  .sw_banner {
+    max-width: 350px;
+  }
 }
