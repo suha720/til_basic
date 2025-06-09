@@ -17,10 +17,10 @@
 
 .banner_slide_item {
   display: inline-block;
-  border-radius: 15px;
   overflow: hidden;
   height: 345px;
   background-color: red;
+  border-radius: 15px;
 }
 
 .banner_slide_item img {
@@ -31,27 +31,27 @@
 }
 
 .banner_slide_prev {
-  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e5e5e5;
+
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
   position: absolute;
-  left: 0;
   top: 50%;
+  left: 0;
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  background-color: rgb(255, 255, 255, 0.5);
+
+  cursor: pointer;
 
   /* 좌표 고정 상태에서 변형 */
   transform: translateY(-50%) translateX(-50%);
 
-  border: 1px solid #e5e5e5;
-  background-color: rgb(255, 255, 255, 0.5);
-  width: 48px;
-  height: 48px;
-
   border-radius: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  cursor: pointer;
-
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
 }
 
 .banner_slide_prev img {
@@ -61,27 +61,27 @@
 }
 
 .banner_slide_next {
-  z-index: 100;
-  position: absolute;
-  right: 0;
-  top: 50%;
-
-  /* 좌표고정 상태에서 변형 */
-  transform: translateY(-50%) translateX(50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   border: 1px solid #e5e5e5;
-  background-color: rgb(255, 255, 255, 0.5);
+
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 100;
   width: 48px;
   height: 48px;
-  /* 너비, 높이 똑같을 경우에 % 가능 */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: rgb(255, 255, 255, 0.5);
 
   cursor: pointer;
 
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
+  /* 좌표고정 상태에서 변형 */
+  transform: translateY(-50%) translateX(50%);
+  /* 너비, 높이 똑같을 경우에 % 가능 */
+  border-radius: 50%;
 }
 
 .banner_slide_pg {

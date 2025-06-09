@@ -7,9 +7,9 @@ body {
 }
 
 .box_frame {
-  background-color: yellowgreen;
   width: 600px;
   height: 600px;
+  background-color: yellowgreen;
 }
 
 .box {

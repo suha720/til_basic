@@ -1,9 +1,9 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   /* 컨텐츠 마다 선택사항, tab 키 눌러서 포커스 되는지 안되는지 */
   outline-style: none;
+  box-sizing: border-box;
 }
 
 ul {
@@ -11,8 +11,8 @@ ul {
 }
 
 a {
-  text-decoration: none;
   color: #000000;
+  text-decoration: none;
 }
 
 .wrap {
@@ -21,9 +21,9 @@ a {
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
     "Noto Sans", sans-serif;
-  font-weight: 400;
   /* 기본 사이즈 16px */
   font-size: 16px;
+  font-weight: 400;
   /* (16 * line-height) */
   line-height: 1.3; 
 }
