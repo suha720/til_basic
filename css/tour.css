@@ -1,0 +1,134 @@
+.tour {
+  position: relative;
+}
+
+.layoutT {
+  /* width 가 있어야 auto 가능 */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1280px;
+  /* background-color: red; */
+}
+
+.tour_header {
+  padding-top: 65px;
+  padding-bottom: 25px;
+}
+.tour_header_title {
+  /* border: 1px solid yellow; */
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+}
+.subtitle {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(18, 18, 18, 0.5);
+}
+
+.tour_header_menu {
+  display: flex;
+  justify-content: center;
+}
+
+.tour_menu_list {
+  display: flex;
+  gap: 8px;
+  /* justify-content: center; */
+}
+
+.tour_menu_list li {
+}
+
+.tour_menu_list li button {
+  padding: 0 20px;
+  border: 1px solid #e5e5e5;
+  /* padding: 16px 20px; */
+  height: 44px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 22px;
+}
+
+.tour_menu_list li button:active {
+    opacity: 0.65;
+}
+
+.tour_menu_list .tour_focus {
+    background-color: #333;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tour_main {
+}
+
+.tour_slide_wrap {
+    position: relative;
+}
+
+.tour_slide {
+    display: flex;
+    gap: 24px;
+}
+
+.tour_item {
+    /* a 태그가 inline 이라서, 불안하니까 block 함 */
+    display: block;
+    /* 넘치는거 자르기 */
+    overflow: hidden;
+    height: 365px;
+    border-radius: 12px;
+}
+
+.tour_item_image {
+    height: 255px;
+}
+.tour_item_image img {
+    width: 100%;
+    height: 100%;
+    /* 영역 부족해도 채워라 */
+    object-fit: cover;
+}
+
+.tour_item_info {
+    position: relative;
+    padding: 20px;
+}
+
+.tour_item_info .city {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    color: #fff;
+    background-color: #4154ff;
+    transform: translateY(-50%);
+    font-size: 13px;
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+.tour_item_info .city_sale {
+}
+.tour_item_info .city_title {
+}
+.tour_item_info .city_price {
+}
+
+.tour_slide_prev {
+}
+
+.tour_slide_next {
+}
+
+.tour_more {
+}
+
+.tour_more_bt {
+}
+
+/* deploy 배포 */
