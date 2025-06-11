@@ -1,11 +1,11 @@
-window.addEventListener("load", () => {
+window.addEventListener("load", function () {
   // 카테고리 버튼 클릭하면 포커스 클래스 이동하기
-  // 포커스 되었을 때 적용됨 포커스 이름
+  // 포커스 되었을 때 적용될 포커스 이름
   const focusName = "tour_focus";
-  const bts = document.querySelectorAll(".tour_menu_list li button");
-  // 태그들을 모아둔 배열을 다룰때 추천 반복 문법
-  bts.forEach((item) => {
-    item.addEventListener("click", () => {
+  const bts = document.querySelectorAll(".tour_button_list li button");
+  // 태그 등의 DOM 들을 모아둔 배열을 다룰때 추천 반복 문법
+  bts.forEach(function (item) {
+    item.addEventListener("click", function () {
       // 모든 버튼에서 tour_focus 클래스 제거
       removeFocus();
       // 클릭된 버튼은 tour_focus 클래스 추가
@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
 
   // 버튼에서 포커스 제거하는 기능
   function removeFocus() {
-    bts.forEach((item) => {
+    bts.forEach(function (item) {
       item.classList.remove(focusName);
     });
   }
@@ -123,34 +123,33 @@ window.addEventListener("load", () => {
       price: "90,000",
     },
   ];
+
   // 1. 슬라이드 태그를 어디에 배치할 것인가?
   const swTourPos = document.querySelector(".sw_tour .swiper-wrapper");
   let htmlTag = "";
 
   for (let i = 0; i < tourDataArr.length; i++) {
     const tag = `
-    <div class="tour_slide">
+    <div class="swiper-slide">
         <a href="#" class="tour_item">
             <div class="tour_item_image">
                 <img
-                        src="${tourDataArr[i].image}"
-                        alt="${tourDataArr[i].alt}"
+                src="${tourDataArr[i].image}"
+                alt="${tourDataArr[i].alt}"
                 />
             </div>
             <div class="tour_item_info">
-                <p class="city">${tourDataArr[i].city}</p>
-                <p class="city_sale">디럭스 더블</p>
-                <p class="city_title">신라스테이 여수 엑스포역</p>
-                <p class="city_price"><b>${tourDataArr[i].price}</b>원~</p>
+                <p class="tour_city">${tourDataArr[i].city}</p>
+                <p class="tour_sale">${tourDataArr[i].sale}</p>
+                <p class="tour_item_title">${tourDataArr[i].title}</p>
+                <p class="tour_price"><b>${tourDataArr[i].price}</b>원~</p>
             </div>
         </a>
     </div>
-    `;
+        `;
 
-    htmlTag += tag;
+    htmlTag = htmlTag + tag;
   }
-
-  const sampleTag = ``;
 
   swTourPos.innerHTML = htmlTag;
 
@@ -160,7 +159,7 @@ window.addEventListener("load", () => {
       rows: 2,
       fill: "row",
     },
-    spaceBetween: 20,
+    spaceBetween: 10,
     slidesPerGroup: 1,
 
     navigation: {

@@ -1,23 +1,19 @@
 .banner {
   position: relative;
 }
-
 .layout {
 }
-
 .banner_wrap {
   position: relative;
 }
-
 .banner_slide {
   display: flex;
-  /* flex-basis: 50%; */
   gap: 25px;
 }
-
 .banner_slide_item {
-  display: inline-block;
+  display: block;
   overflow: hidden;
+
   height: 345px;
   border-radius: 15px;
 }
@@ -35,27 +31,23 @@
   justify-content: center;
 
   border: 1px solid #e5e5e5;
-
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
   position: absolute;
   top: 50%;
   left: 0;
   z-index: 100;
+
   width: 48px;
   height: 48px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.5);
 
   cursor: pointer;
 
-  /* 좌표 고정 상태에서 변형 */
   transform: translateY(-50%) translateX(-50%);
-
   border-radius: 24px;
 }
 
 .banner_slide_prev img {
-  /* 좌표 고정 상태에서 변형 */
-  /* 좌우반전 */
   transform: rotate(180deg);
 }
 
@@ -65,21 +57,19 @@
   justify-content: center;
 
   border: 1px solid #e5e5e5;
-
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
   position: absolute;
   top: 50%;
   right: 0;
   z-index: 100;
+
   width: 48px;
   height: 48px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.5);
 
   cursor: pointer;
 
-  /* 좌표고정 상태에서 변형 */
   transform: translateY(-50%) translateX(50%);
-  /* 너비, 높이 똑같을 경우에 % 가능 */
   border-radius: 50%;
 }
 
@@ -93,12 +83,12 @@
     height: 275px;
   }
 }
-
 @media all and (max-width: 1024px) {
   .banner_slide_item {
     height: 202px;
   }
-  /* 다중으로 선택함 (`,` 로 구분함) */
+
+  /* 다중으로 선택함 ( , 로 구분함)  */
   .banner_slide_next,
   .banner_slide_prev {
     display: none;
@@ -108,9 +98,9 @@
   .banner_slide_pg {
     display: flex;
     justify-content: center;
-    padding-top: 8px;
-  }
 
+    padding-top: 10px;
+  }
   /* 기본 버튼들의 모양 css */
   .banner_slide_pg .swiper-pagination-bullet {
   }
@@ -124,29 +114,28 @@
   .sw_banner {
     max-width: 350px;
   }
-  /* 페이지네이션 위치 조정 */
+  /* 페이지네이션 위치 조절 */
   .banner_slide_pg {
     align-items: center;
+
     padding-top: 0px;
+    /* 위치말고 내용물만 이동함 */
+    transform: translateY(-15px);
+    /* z-index가 안되는 경우는 position 이 없어서 */
     position: relative;
     z-index: 100;
-    /* 위치말고 내용물만 이동함 */
-    transform: translateY(-16px);
   }
   .banner_slide_pg .swiper-pagination-bullet {
+    background-color: #ffffff;
+    opacity: 0.6;
     width: 6px;
     height: 6px;
-    background-color: #fff;
-    opacity: 0.6;
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
   .banner_slide_pg .swiper-pagination-bullet-active {
+    background-color: #ffffff;
+    opacity: 1;
     width: 8px;
     height: 8px;
-    background-color: #fff;
-    /* 선명하게 보임 */
-    opacity: 1;
   }
 }
-
-/* transform 포지션은 유지하면서 위치 이동하고 싶을때 */

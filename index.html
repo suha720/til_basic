@@ -5,34 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NOL 인터파크</title>
 
-    <!-- swiper 에서 가져온것 -->
+    <!-- Link Swiper's CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/header.css" />
-    <!-- js 한줄씩 위에서부터 내려옴, 그래서 순서상 header 클래스 없음 -->
     <script src="js/header.js"></script>
-
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/banner.css" />
     <script src="js/banner.js"></script>
+
     <link rel="stylesheet" href="css/tour.css" />
     <script src="js/tour.js"></script>
-    <link
-      rel="icon"
-      href="//openimage.interpark.com/UI/favicon/int_favicon.ico"
-    />
   </head>
   <body>
     <!-- 영역구분 : 내용과 바탕  -->
@@ -45,7 +35,7 @@
           <div class="header_top">
             <div class="header_top_left">
               <a href="#" class="logo">
-                <img src="/images/nol-interpark-logo.svg" alt="인터파크" />
+                <img src="images/nol-interpark-logo.svg" alt="인터파크" />
               </a>
               <div class="search">
                 <!-- 검색폼 -->
@@ -56,7 +46,7 @@
                     id="good"
                     placeholder="인기공연 타임딜"
                   />
-                  <button class="btn_search">
+                  <button class="bt_search">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -84,25 +74,25 @@
                 <!-- 검색폼 -->
               </div>
               <a href="#" class="sale">
-                <img src="/images/b1.png" alt="할인이벤트" />
+                <img src="images/b1.png" alt="할인이벤트" />
               </a>
             </div>
             <div class="header_top_right">
               <ul class="link_site">
                 <li class="link_site_line">
                   <a href="#" target="_blank">
-                    <img src="/images/partner-nol.svg" alt="NOL" />
+                    <img src="images/partner-nol.svg" alt="NOL" />
                   </a>
                 </li>
                 <li class="link_site_line">
                   <a href="#" target="_blank">
-                    <img src="/images/partner-triple.svg" alt="TRIPLE" />
+                    <img src="images/partner-triple.svg" alt="TRIPLE" />
                   </a>
                 </li>
                 <li>
                   <a href="#" target="_blank">
                     <img
-                      src="/images/partner-interpark-global.svg"
+                      src="images/partner-interpark-global.svg"
                       alt="Interpark Global"
                       style="transform: translateY(2px)"
                     />
@@ -115,16 +105,22 @@
           <div class="header_bottom">
             <div class="header_bottom_left">
               <ul class="main_menu">
-                <li><a href="#" class="focus">홈</a></li>
-                <li><a href="#">투어</a></li>
-                <li><a href="#">티켓</a></li>
+                <li>
+                  <a href="#" class="focus"> 홈 </a>
+                </li>
+                <li>
+                  <a href="#"> 투어 </a>
+                </li>
+                <li>
+                  <a href="#">티켓</a>
+                </li>
               </ul>
             </div>
             <div class="header_bottom_right">
               <ul class="member_menu">
                 <li>
-                  <a href="#">
-                    <svg
+                  <a href="#"
+                    ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
                       height="19"
@@ -143,14 +139,13 @@
                         r="4"
                         stroke="#29292D"
                         stroke-width="1.5"
-                      ></circle>
-                    </svg>
-                    로그인
-                  </a>
+                      ></circle></svg
+                    >로그인</a
+                  >
                 </li>
                 <li>
-                  <a href="#">
-                    <svg
+                  <a href="#"
+                    ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
@@ -171,9 +166,8 @@
                         stroke-width="1.5"
                         stroke-linecap="round"
                         stroke-dasharray="1 3"
-                      ></line>
-                    </svg>
-                    냐예약</a
+                      ></line></svg
+                    >내예약</a
                   >
                 </li>
               </ul>
@@ -188,7 +182,7 @@
             <li>
               <a href="#">
                 <img
-                  src="/images/nol-interpark-logo-multiline.svg"
+                  src="images/nol-interpark-logo-multiline.svg"
                   alt="인터파크"
                 />
               </a>
@@ -229,50 +223,17 @@
         <!-- 배너 -->
         <div class="banner">
           <div class="layout">
-            <!-- 배너 슬라이드 -->
+            <!-- 배너슬라이드 -->
             <div class="banner_wrap">
               <!-- Swiper -->
               <div class="swiper sw_banner">
                 <div class="swiper-wrapper">
                   <!-- API 연동 -->
-                  <!-- <div class="swiper-slide">
-                    <a href="#" class="banner_slide_item">
-                      <img src="images/s1.jpg" alt="이미지" />
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#" class="banner_slide_item">
-                      <img src="images/s2.png" alt="이미지" />
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#" class="banner_slide_item">
-                      <img src="images/s2.png" alt="이미지" />
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#" class="banner_slide_item">
-                      <img src="images/s2.png" alt="이미지" />
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="#" class="banner_slide_item">
-                      <img src="images/s1.jpg" alt="이미지" />
-                    </a>
-                  </div> -->
                 </div>
               </div>
 
               <!-- 슬라이드 목록 -->
-              <!-- swiper 라이브러니는 위대하다 -->
-              <!-- <div class="banner_slide">
-                <a href="#" class="banner_slide_item">
-                  <img src="images/s1.jpg" alt="이미지" />
-                </a>
-                <a href="#" class="banner_slide_item">
-                  <img src="images/s2.png" alt="이미지" />
-                </a>
-              </div> -->
+
               <!-- 좌측이동 버튼 -->
               <button class="banner_slide_prev">
                 <img src="images/slider_arrow.svg" alt="이전" />
@@ -287,18 +248,16 @@
           </div>
         </div>
         <!-- 투어 -->
-        <!-- div 레이아웃, section 내용 구분 -->
-        <!-- section 제목은 h2를 주로 쓴다네 <= block -->
         <section class="tour">
-          <div class="layoutT">
+          <div class="layout">
             <!-- 상단 -->
-            <div class="tour_header">
-              <div class="tour_header_title">
+            <div class="tour_top">
+              <div class="tour_top_title">
                 <h2 class="title">투어 특가</h2>
                 <p class="subtitle">마감임박! 금주의 특가 여행 추천</p>
               </div>
-              <div class="tour_header_menu">
-                <ul class="tour_menu_list">
+              <div class="tour_top_category">
+                <ul class="tour_button_list">
                   <li><button class="tour_focus">마감임박</button></li>
                   <li><button>패키지</button></li>
                   <li><button>국내숙소</button></li>
@@ -307,79 +266,35 @@
                 </ul>
               </div>
             </div>
-            <!-- 중단 -->
-            <div class="tour_main">
+            <!-- 하단 -->
+            <div class="tour_bottom">
               <!-- 슬라이드 -->
               <div class="tour_slide_wrap">
-                <!-- Start Swiper Tour Slide -->
+                <!--Start Swiper Tour Slide -->
                 <div class="swiper sw_tour">
                   <div class="swiper-wrapper">
-                    <!-- 추후 API 연동으로 대체함 -->
+                    <!--  추후 API 연동으로 대체함 -->
                   </div>
                 </div>
-                <!-- End Swiper Tour Slide -->
-                <div class="tour_slide">
-                  <a href="#" class="tour_item">
-                    <div class="tour_item_image">
-                      <img
-                        src="https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740021192/domstay/dd10d7149b6a49fd.jpg"
-                        alt="투어이미지"
-                      />
-                    </div>
-                    <div class="tour_item_info">
-                      <p class="city">강원</p>
-                      <p class="city_sale">디럭스 더블</p>
-                      <p class="city_title">신라스테이 여수 엑스포역</p>
-                      <p class="city_price"><b>80,000</b>원~</p>
-                    </div>
-                  </a>
-                  <a href="#" class="tour_item">
-                    <div class="tour_item_image">
-                      <img
-                        src="https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740021192/domstay/dd10d7149b6a49fd.jpg"
-                        alt="투어이미지"
-                      />
-                    </div>
-                    <div class="tour_item_info">
-                      <p class="city">강원</p>
-                      <p class="city_sale">디럭스 더블</p>
-                      <p class="city_title">신라스테이 여수 엑스포역</p>
-                      <p class="city_price"><b>80,000</b>원~</p>
-                    </div>
-                  </a>
-                  <a href="#" class="tour_item">
-                    <div class="tour_item_image">
-                      <img
-                        src="https://media.interparkcdn.net/interpark-tour/image/upload/w_640,h_410,c_limit/v1740021192/domstay/dd10d7149b6a49fd.jpg"
-                        alt="투어이미지"
-                      />
-                    </div>
-                    <div class="tour_item_info">
-                      <p class="city">강원</p>
-                      <p class="city_sale">디럭스 더블</p>
-                      <p class="city_title">신라스테이 여수 엑스포역</p>
-                      <p class="city_price"><b>80,000</b>원~</p>
-                    </div>
-                  </a>
-                </div>
+                <!--End Swiper Tour Slide -->
 
-                <button class="tour_slide_prev super_btn">
+                <button class="tour_slide_prev">
                   <img src="images/slider_arrow.svg" alt="이전" />
                 </button>
-                <button class="tour_slide_next super_btn">
-                  <img src="images/slider_arrow.svg" alt="이전" />
+                <button class="tour_slide_next">
+                  <img src="images/slider_arrow.svg" alt="다음" />
                 </button>
               </div>
+              <!-- 더보기 -->
               <div class="tour_more">
                 <a href="#" class="tour_more_bt">
                   투어 홈 바로가기
-                  <img src="images/icon_arrow.svg" alt="투어 홈 바로가기"
-                /></a>
+                  <img src="images/icon_linkArrow.svg" alt="투어 홈 바로가기" />
+                </a>
               </div>
             </div>
           </div>
         </section>
-
         <!-- 트립 -->
         <div class="trip"></div>
         <!-- 티켓랭킹 -->

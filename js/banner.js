@@ -51,22 +51,13 @@ window.addEventListener("DOMContentLoaded", function () {
   const bannerPos = document.querySelector(".sw_banner .swiper-wrapper");
 
   // html 태그 만들기
-  const tag = `
-  <div class="swiper-slide">
-    <a href="#" class="banner_slide_item">
-        <img src="images/s1.jpg" alt="이미지" />
-    </a>
-</div>  
-  `;
-
   // 6개 만들기
   let htmlTag = "";
 
   for (let i = 0; i < total; i++) {
     htmlTag =
       htmlTag +
-      `
-<div class="swiper-slide">
+      `<div class="swiper-slide">
     <a href="${apiData[i].link}" class="banner_slide_item">
         <img src="${apiData[i].image}" alt="${apiData[i].alt}" />
     </a>
@@ -74,7 +65,7 @@ window.addEventListener("DOMContentLoaded", function () {
     `;
   }
 
-  console.log(htmlTag);
+  // console.log(htmlTag);
 
   // html 장소에 배치하기
   bannerPos.innerHTML = htmlTag;
@@ -96,7 +87,6 @@ window.addEventListener("DOMContentLoaded", function () {
     },
     pagination: {
       el: ".banner_slide_pg",
-      // 페이지네이션 선택해서 이동하기
       clickable: true,
     },
     breakpoints: {
@@ -110,11 +100,11 @@ window.addEventListener("DOMContentLoaded", function () {
   // 아래 코드는 별도로 작성을 한 것입니다. (보관 권장)
   const banner = document.querySelector(".sw_banner");
   // 배너 영역에 마우스가 걸친다면
-  banner.addEventListener("mouseenter", () => {
+  banner.addEventListener("mouseenter", function () {
     swiper.autoplay.stop();
   });
   // 배너 영역에 마우스가 빠져나간다면
-  banner.addEventListener("mouseleave", () => {
+  banner.addEventListener("mouseleave", function () {
     swiper.autoplay.start();
   });
 });

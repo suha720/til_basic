@@ -1,118 +1,104 @@
 .tour {
   position: relative;
 }
-
-.layoutT {
-  /* width 가 있어야 auto 가능 */
+.layout {
+  /* 영역 가운데 정렬 */
   margin: 0 auto;
   width: 100%;
   max-width: 1280px;
-  /* background-color: red; */
 }
-
-.tour_header {
+.tour_top {
   padding-top: 65px;
   padding-bottom: 25px;
 }
-.tour_header_title {
-  /* border: 1px solid yellow; */
-  text-align: center;
+.tour_top_title {
+  display: block;
+  width: 100%;
 }
 
 .title {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 600;
   color: #000;
+  text-align: center;
 }
 .subtitle {
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: 400;
   color: rgba(18, 18, 18, 0.5);
+  text-align: center;
 }
 
-.tour_header_menu {
+.tour_top_category {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
-
-.tour_menu_list {
+.tour_button_list {
   display: flex;
-  gap: 8px;
-  /* justify-content: center; */
+  gap: 6px;
 }
-
-.tour_menu_list li {
-  flex-shrink: 0;
+.tour_button_list li {
 }
-
-.tour_menu_list li button {
-  padding: 0 20px;
+.tour_button_list li button {
+  padding: 0 18px;
   border: 1px solid #e5e5e5;
-  /* padding: 16px 20px; */
+  /* padding: 11px 16px; */
   height: 44px;
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   cursor: pointer;
   border-radius: 22px;
 }
-
-.tour_menu_list li button:active {
+.tour_button_list li button:active {
   opacity: 0.65;
 }
 
-.tour_menu_list .tour_focus {
-  background-color: #333;
+.tour_focus {
+  background-color: #333 !important;
   font-weight: 600;
-  color: #fff;
+  color: #fff !important;
 }
 
-.tour_main {
+.tour_bottom {
+  display: block;
+  width: 100%;
 }
-
 .tour_slide_wrap {
+  display: block;
   position: relative;
-  /* min-width: 1024px; */
+  width: 100%;
 }
-
 .tour_slide {
   display: flex;
-  gap: 24px;
-  /* justify-content: center; */
-  /* justify-content: space-around; */
-  /* justify-content: space-between; */
+  gap: 26px;
 }
-
 .tour_item {
-  /* a 태그가 inline 이라서, 불안하니까 block 함 */
   display: block;
-  /* 넘치는거 자르기 */
   overflow: hidden;
   height: 365px;
   border-radius: 12px;
 }
 
 .tour_item_image {
+  width: 100%;
   height: 255px;
 }
 .tour_item_image img {
   width: 100%;
   height: 100%;
-  /* 영역 부족해도 채워라 */
   object-fit: cover;
 }
-
 .tour_item_info {
   padding: 20px;
   border: 1px solid #f0f0f0;
   border-top: none;
   position: relative;
   height: calc(100% - 255px);
-  /* 11시부터 시계방향으로 */
-  border-radius: 0 0 12px 12px;
+  border-radius: 0px 0px 12px 12px;
 }
-
-.tour_item_info .city {
-  padding: 5px 12px;
+.tour_item_info .tour_city {
+  padding: 5px 10px;
   position: absolute;
   top: 0;
   left: 20px;
@@ -122,33 +108,29 @@
   transform: translateY(-50%);
   border-radius: 4px;
 }
-.tour_item_info .city_sale {
+
+.tour_item_info .tour_sale {
   font-size: 15px;
-  /* 기본 400 */
   font-weight: 400;
   color: rgb(65, 84, 255);
 }
 
 /* 한줄 말줄임 ... 은 css 작업합니다. */
-/* 한줄 이상 말줄임 ... 은 css 작업합니다. */
-.tour_item_info .city_title {
-  /* 넘치는 삭제하라 */
+.tour_item_info .tour_item_title {
+  /* 아래는 보관해 두세요. */
   overflow: hidden;
   font-size: 15px;
+  font-weight: 400;
   color: #333;
-  /* 말줄임 */
-  /* 줄내림 하지마라 */
   white-space: nowrap;
-  /* 넘치는 ... */
   text-overflow: ellipsis;
 }
-.tour_item_info .city_price {
+.tour_item_info .tour_price {
   font-size: 20px;
   font-weight: 400;
   color: #111;
 }
-
-.tour_item_info .city_price b {
+.tour_item_info .tour_price b {
   font-weight: 700;
 }
 
@@ -159,12 +141,16 @@
   top: 50%;
   left: 0;
   z-index: 999;
+
   width: 48px;
   height: 48px;
   background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  transform: translateY(-50%) translateX(-50%) rotate(180deg);
+  transform: translateY(-50%) translateX(-50%);
   border-radius: 24px;
+}
+.tour_slide_prev img {
+  transform: rotate(180deg);
 }
 
 .tour_slide_next {
@@ -172,8 +158,9 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
   position: absolute;
   top: 50%;
-  right: 0px;
+  right: 0;
   z-index: 999;
+
   width: 48px;
   height: 48px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -181,22 +168,23 @@
   transform: translateY(-50%) translateX(50%);
   border-radius: 24px;
 }
-
 .tour_more {
   display: flex;
   justify-content: center;
   padding-top: 50px;
 }
-
 .tour_more_bt {
   display: flex;
-  gap: 8px;
+  gap: 7px;
   align-items: center;
   padding: 0 20px;
+
   border: 1px solid #e5e5e5;
+
   height: 56px;
   background-color: #fff;
-  font-size: 13px;
+
+  font-size: 16px;
   font-weight: 700;
   color: #333;
   border-radius: 23px;
@@ -207,14 +195,14 @@
 }
 
 /* 반응형 코드 */
-@media all and (max-width: 1280px) {}
+@media all and (max-width: 1280px) {
+}
 @media all and (max-width: 1024px) {
-  .tour_slide_wrap {
-    /* 너비 고정 및 overflow-x를 통해서 모양 유지 */
+  .tour_slide_wrap{
     width: 1024px;
   }
 }
-@media all and (max-width: 960px) {}
-@media all and (max-width: 760px) {}
-
-/* deploy 배포 */
+@media all and (max-width: 960px) {
+}
+@media all and (max-width: 760px) {
+}
