@@ -246,6 +246,29 @@
 - 아이콘은 https://react-icons.github.io/react-icons/ 활용
 - `<img src="이미지경로/파일명.확장" alt="대체글"/>`
 
+### 3.3.5. h 태그(heading)
+
+- 문서의 타이틀 역할을 함을 표현함.
+- h1 ~ h6 로 구성
+- html 문서에서 h1 은 한번만 사용하기를 권장함.
+- 각 영역별로 h2 도 한번만 사용하기를 권장함.
+
+### 3.3.6. p태그 (Paragraph)
+
+- 글자로 된 문단작성시 활용
+
+### 3.3.7. <br/> 태그
+
+- 한 줄 내림
+
+### 3.3.8. <b></b>태그
+
+- 글자를 굵게 표현함
+
+### 3.3.9. <section></section> 태그
+
+- 시멘틱 태그로서 내용 영역 구분
+
 # 4. CSS 의 이해
 
 - css 선택자
@@ -417,14 +440,16 @@
 ```
 
 ## 4.7. before, after 의 이해
+
 ```html
 <대상> before 내용 after </대상>
 ```
+
 - 대표적으로 아이콘 출력하는 경우 많이 활용
 
 ```css
 대상::after {
-    content: "";
+  content: "";
 }
 
 대상::before {
@@ -433,6 +458,7 @@
 ```
 
 ## 4.8. CSS 우선순위 (아주 중요합니다.)
+
 - 어느 css 가 마지막에 적용되는가?
 - 기본 : 태그(작성순서 비교) ===> 클래스(작성순서 비교) ===> 아이디
 - 범위(`공백` 자손) 선택자 CSS 다시 적용된다.
@@ -441,9 +467,10 @@
 - 도저히 해결이 안된다면 `!important` 옵션을 사용합니다.
 
 ## 4.9. PostCSS Sorting 설치 및 설정
+
 - css 속성 정렬하기
 - 단축키 생성 : `shift + alt + p` 등록
-[참고](https://velog.io/@leejpsd/NHN-%EC%BD%94%EB%94%A9-%EC%BB%A8%EB%B2%A4%EC%85%98%EC%97%90-%EB%94%B0%EB%A5%B8-CSS-%EC%84%A0%EC%96%B8%EC%88%9C%EC%84%9C-PostCSS-Sorting-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0)
+  [참고](https://velog.io/@leejpsd/NHN-%EC%BD%94%EB%94%A9-%EC%BB%A8%EB%B2%A4%EC%85%98%EC%97%90-%EB%94%B0%EB%A5%B8-CSS-%EC%84%A0%EC%96%B8%EC%88%9C%EC%84%9C-PostCSS-Sorting-%EC%9D%B4%EC%9A%A9%ED%95%98%EA%B8%B0)
 
 ```json
 "postcssSorting.config": {
@@ -610,13 +637,25 @@
   }
 ```
 
+## 4.10. 한줄 밑 줄임 코드 (... 처리)
+
+```css
+선택 {
+  white-space: nowrap
+  overflow: hidden;
+  text-overflow: ellipsi
+}
+```
+
 # 5. javaScript 의 이해
+
 - Java 는 객체지향프로그래밍, javaScript 는 스크립트 프로그래밍
 - 웹 브라우저용 js 가 원본인데, V8 엔진만 추출해서 Node.js 만듦
-- PC용 즉, 로컬용 JS 가 Node.js 입니다. 
+- PC용 즉, 로컬용 JS 가 Node.js 입니다.
   (DB 제어, 네트워크, 소프트웨어, 앱 개발 등)
 
 ## 5.1. 기본적인 js 의 역할(개인 주관)
+
 - html, css 제어 js
 - 데이터 연동 js
 
@@ -625,35 +664,45 @@
 - 가장 아랫 줄이 제일 좋은 코드 자리 입니다.
 
 ### 5.2.1 인라인 방식
+
 ```html
 <태그 onload="" onclick=""></태그>
 ```
+
 ### 5.2.2 태그 방식
+
 ```html
 <script></script>
 <태그></태그>
 ```
+
 ### 5.2.3 파일 방식
+
 ```html
 <script src="경로/파일명.확장자"></script>
 <태그></태그>
 ```
 
 ## 5.3. js 가 실행되는 시점 유의 사항 (html, css 제어시)'
+
 - html 과 js 가 모두 준비가 되면 실행되길 원함.
+
 ```js
 window.addEventListener("DOMContentLoaded", () => {
   // 할일
-})
+});
 ```
+
 - 이미지 등의 용량이 큰 리소스가 모두 준비되면 실행되길 원함.
+
 ```js
 window.addEventListener("load", () => {
   // 할일
-})
+});
 ```
 
 ## 5.4. js 를 이용한 태그 선택하기
+
 ```js
 const tag = document.querySelector("태그");
 const tag = document.querySelector(".클래스");
@@ -663,12 +712,14 @@ const tag = document.querySelectorAll(".클래스 태그 태그");
 ```
 
 ## 5.5. 백틱을 이용한 변수값 출력
+
 ```js
 const age = 20;
 const tag = `<div>나이는 ${age}</div>`;
 ```
 
 ## 5.6. 문자를 html 로 출력하기
+
 ```js
 const tag = `<div>안녕</div>`;
 const pos = document.querySelector(".hi");
@@ -676,20 +727,25 @@ pos.innerHEML = tag;
 ```
 
 ## 5.7. 원시(Primitive) 데이터 종류의 이해
+
 - js 에서 이해할 수 있느 자료의 종류를 `데이터타입` 또는 `데이터 형` 이라고 합니다.
 - 영어로는 Data Type 이라고 합니다.
 
 ### 5.7.1 문자열
+
 - 문자와 문자열은 다릅니다.
+
 ```js
 const 변수명 = 변수값;
 const nickName1 = "홍길동";
-const nickName2 = '홍길동';
+const nickName2 = "홍길동";
 const nickName3 = `홍길동`;
 ```
 
 ### 5.7.2. 숫자
+
 - 실수(소수), 정수(양수, 음수)
+
 ```js
 const 변수명 = 변수값;
 const age = 10;
@@ -697,59 +753,72 @@ const height = 100.5;
 ```
 
 ### 5.7.3. 불리언(참, 거짓)
+
 - true, false
+
 ```js
 const isLogin = true;
 const isMember = false;
 ```
 
 ### 5.7.4. undefined
+
 - 모든 변수의 초기값;
 - 변수값이 정의가 안되었어요.;
+
 ```js
 let nickName;
 ```
 
 ### 5.7.5. null
+
 - 개발자가 정말 값이 없다고 명시함.
+
 ```js
 const isLogin = null;
 ```
 
 ### 5.7.6. symbol
+
 - 절대로 js 코드에서 중복이 안되는 내용 만드는 경우
 
 ## 5.8. 원시데이터를 모아서 만드는 데이터 종류의 이해
+
 - 복합데이터 또는 참조형 데이터(Reference Type)
 - TypeScript
 
 ### 5.8.1. 배열
+
 - 기호로는 `[]` 사용합니다.
 - 배열은 순서가 중요하므로 순서값 즉, 인덱싱을 관리합니다.
 - 인덱스는 자동으로 0 번부터 `, ` 마다 증가합니다.
 - `변수명[인덱스번호]` 를 통해서 원하는 값 추출 함.
 - 배열은 `변수명.length` 가 주어집니다.
 
-```js 
+```js
 const arr = [1, 3, "안녕", true, false, null, undefined, symbol];
 arr[2]; // "안녕" 추출
 arr.lenght; // 8
 ```
+
 ### 5.8.2. 객체
+
 ```js
 const obj = {
-  속성명1 : 1,
-  속성명2 : "과학",
-  속성명3 : false
+  속성명1: 1,
+  속성명2: "과학",
+  속성명3: false,
 };
 
-obj.속성명1 // 1
+obj.속성명1; // 1
 ```
 
 ## 5.9. 반복문
+
 - for문, while ans, di while 문
 - 우선 for 문이 활용을 98 이상일 듯합니다.
 - for 문의 특징은 몇 번 반복해야 할지 횟수를 아는 경우 활용
+
 ```js
 for(초기값; 조건식; 증감식) {
   // 할일
@@ -760,8 +829,10 @@ for(let i = 0;, i < 10; i++>){
 ```
 
 ## 5.10. 조건문
+
 - if, switch
 - 웹 퍼블리싱에서는 if 문이 코드에 90% 이상일 듯
+
 ```js
 if(true or false ) {
   // true 면 실행
@@ -769,3 +840,153 @@ if(true or false ) {
   // false 면 실행
 }
 ```
+
+# 6. Swiper 슬라이드의 이해
+
+- 대표적인 슬라이드 라이브러리
+  - Swiper
+  - Slick
+  - BxSlider
+
+## 6.1. Swiper 슬라이드 사용하는 이유
+
+- 안정성, 반응형, 모바일 터치 지원
+- React, Vue, Svlet 등의 FrontEnd 기술지원
+- TypeScript 지원 및 예제 지원
+
+## 6.2. 기본적인 기능은 예제에서 확인 후 활용
+
+- https://swiperjs.com/demos
+- Core 소스 : 웹 퍼블리싱 참조
+- React 소스 : FE 에서 참조
+
+## 6.3. 아주 특별한 기능을 구현하는 경우(예제에서 없는 기능)
+
+- API 문서 참조 : https://swiperjs.com/swiper-api
+
+## 6.4. Core 샘플 활용하기 (웹 퍼블리싱)
+
+### 6.4.1. html 에 반드시 배치하기(2줄)
+
+- 반드시 우리의 css 와 js 파일 연결 코드 보다 윗줄에 있어야 합니다.
+
+```html
+<!-- Link Swiper's CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+```
+
+### 6.4.2. div 클래스 명에서 절대로 수정하면 안됨
+
+```html
+<!-- Swiper -->
+<div class="swiper 개발자클래스">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">내용</div>
+    <div class="swiper-slide">내용</div>
+    <div class="swiper-slide">내용</div>
+  </div>
+</div>
+```
+
+### 6.4.3. swiper 슬라이드 작동되는지 확인 부터 하기
+
+- load 는 이미지 등의 용량이 큰 파일이 로드 되면 실행하도록 함
+  - DOM 으로 한다면 파일이 준비되기 전에 띄워서 보기 흉해짐.
+
+```js
+window.addEventListener("load", () => {
+  // swiper 만들기 실행
+  new Swiper(".개발자클래스", {});
+});
+```
+
+### 6.4.4. 옵션들
+
+- slidesPerView : 화면당 보여줄 슬라이드 수
+- spaceBetween : 슬라이드의 간격(픽셀단위)
+- slidesPerGroup : 한번 이동시 몇개의 슬라이드 이동개수
+- breakpoints : 웹 브라우저 너비(픽셀) 계산 후 슬라이드 배치
+
+```js
+window.addEventListener("load", () => {
+  new Swiper(".sw_tour", {
+    slidesPerView: 2,
+    spaceBetween: 24,
+    slidesPerGroup: 2,
+    // 반응형
+    breakpoints: {
+      760: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      1280: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
+    },
+  });
+});
+```
+
+- 그리드를 이용한 2줄 이상
+
+```js
+window.addEventListener("load", () => {
+  new Swiper(".sw_tour", {
+    slidesPerView: 5,
+    grid: {
+      rows: 2,
+      fill: "row",
+    },
+    spaceBetween: 26,
+    slidesPerGroup: 1,
+    // 반응형
+    breakpoints: {
+      1024: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        grid: {
+          rows: 1,
+          fill: "row",
+        },
+      },
+      1280: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        grid: {
+          rows: 1,
+          fill: "row",
+        },
+      },
+    },
+  });
+});
+```
+
+- 좌측, 우측 슬라이드 이동
+- 첫 페이지와 마지막 페이지에서 버튼 숨기기 적용
+- 원본 Swiper 예제의 버튼의 클래스 명을 꼭 알아내서 활용하자
+
+```css
+/* 안보이게 하기, 시작과 끝 */
+.swiper-button-disabled {
+  display: none !important;
+}
+```
+
+```js
+    navigation: {
+      nextEl: ".버튼클래스명",
+      prevEl: ".버튼클래스명",
+    },
+```
+
+- git 아이디 바꿀때
+  - git remote remove origin : 온라인 주소 삭제
+  - git remote -v : 삭제가 된지 안된지 확인하기
+  - 새로운 레퍼지토리에서 주소 복사하기

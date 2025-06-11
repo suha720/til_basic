@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+html {
+  /* window 자체에서 가로 스크롤바 안나타나게 하기 */
+  overflow-x: hidden;
+}
+
 ul {
   list-style: none;
 }
