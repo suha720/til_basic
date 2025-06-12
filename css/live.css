@@ -1,0 +1,97 @@
+.live {
+  padding-top: 30px;
+}
+
+.layout {
+}
+
+.live_header {
+  padding-bottom: 25px;
+}
+
+.live_header_title {
+  text-align: center;
+}
+
+.live_slide_wrap {
+  position: relative;
+}
+
+.live_slide {
+  display: flex;
+  gap: 20px;
+}
+
+.live_slide_item {
+  /* 라이브 슬라이드 높이 455px */
+  /* block 로 안만들어도 width 만 100% 이여도 괜찮은데? */
+  display: block;
+  border: 1px solid #f0f0f0;
+  width: 100%;
+  height: 455px;
+  border-radius: 11px;
+
+  background-color: aqua;
+}
+
+.live_slide_prev {
+  /* 화살표 모양 정중앙으로 정렬 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  border-radius: 24px;
+}
+
+.live_slide_prev img {
+  transform: rotate(180deg);
+}
+
+.live_slide_next {
+  /* 화살표 모양 정중앙으로 정렬 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.13);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transform: translate(50%, -50%);
+  border-radius: 24px;
+}
+
+.live_footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.live_more_bt {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 0 39px;
+  border: 1px solid #e5e5e5;
+  height: 56px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  border-radius: 28px;
+}

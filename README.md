@@ -889,6 +889,12 @@ if(true or false ) {
     <div class="swiper-slide">내용</div>
     <div class="swiper-slide">내용</div>
     <div class="swiper-slide">내용</div>
+    <div class="swiper-slide">내용</div>
+    <div class="swiper-slide">내용</div>
+    <div class="swiper-slide">내용</div>
+    <div class="swiper-slide">내용</div>
+    <div class="swiper-slide">내용</div>
+    <div class="swiper-slide">내용</div>
   </div>
 </div>
 ```
@@ -980,6 +986,7 @@ window.addEventListener("load", () => {
 ```
 
 ```js
+    // 브레이크 위로
     navigation: {
       nextEl: ".버튼클래스명",
       prevEl: ".버튼클래스명",
