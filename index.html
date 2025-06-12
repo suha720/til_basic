@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NOL 인터파크</title>
 
+    <!-- 파비콘 훔치기 -->
+    <link
+      rel="icon"
+      href="//openimage.interpark.com/UI/favicon/int_favicon.ico"
+    />
     <!-- Link Swiper's CSS -->
     <link
       rel="stylesheet"
@@ -27,6 +32,10 @@
     <!-- trip 연결 -->
     <link rel="stylesheet" href="css/trip.css" />
     <script src="js/trip.js"></script>
+
+    <!-- ticket 연결 -->
+    <link rel="stylesheet" href="/css/ticket.css" />
+    <script src="js/ticket.js"></script>
 
     <!-- live 연결 -->
     <link rel="stylesheet" href="css/live.css" />
@@ -367,7 +376,73 @@
           </div>
         </section>
         <!-- 티켓랭킹 -->
-        <div class="ticket"></div>
+        <section class="ticket">
+          <div class="layout">
+            <div class="ticket_header">
+              <h2 class="ticket_header_title">티켓 랭킹</h2>
+              <p class="ticket_header_text">오늘 뭐볼까? 지금 HOT한 공연</p>
+              <ul class="ticket_nav">
+                <li class="ticket_nav_item">
+                  <button class="ticket_header_btn ticket_focus">뮤지컬</button>
+                </li>
+                <li class="ticket_nav_item">
+                  <button class="ticket_header_btn">콘서트</button>
+                </li>
+                <li class="ticket_nav_item">
+                  <button class="ticket_header_btn">스포츠</button>
+                </li>
+                <li class="ticket_nav_item">
+                  <button class="ticket_header_btn">전시/행사</button>
+                </li>
+                <li class="ticket_nav_item">
+                  <button class="ticket_header_btn">클래식/무용</button>
+                </li>
+                <li class="ticket_nav_item">
+                  <button class="ticket_header_btn">아동/가족</button>
+                </li>
+                <li class="ticket_nav_item">
+                  <button class="ticket_header_btn">무용</button>
+                </li>
+                <li class="ticket_nav_item">
+                  <button class="ticket_header_btn">레저/캠핑</button>
+                </li>
+              </ul>
+            </div>
+            <div class="ticket_slide_wrap">
+              <div class="swiper sw_ticket">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#" class="ticket_slide_item"></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ticket_slide_item"></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ticket_slide_item"></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ticket_slide_item"></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ticket_slide_item"></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="ticket_slide_item"></a>
+                  </div>
+                </div>
+              </div>
+              <button class="ticket_slide_prev">
+                <img src="/images/slider_arrow.svg" alt="이전" />
+              </button>
+              <button class="ticket_slide_next">
+                <img src="/images/slider_arrow.svg" alt="다음" />
+              </button>
+            </div>
+            <div class="ticket_footer">
+              <a href="#" class="ticket_more_bt">티켓 홈 바로가기</a>
+            </div>
+          </div>
+        </section>
         <!-- 라이브 -->
         <section class="live">
           <div class="layout">

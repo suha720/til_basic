@@ -119,23 +119,23 @@
     align-items: center;
 
     padding-top: 0px;
-    /* 위치말고 내용물만 이동함 */
-    transform: translateY(-15px);
     /* z-index가 안되는 경우는 position 이 없어서 */
     position: relative;
     z-index: 100;
+    /* 위치말고 내용물만 이동함 */
+    transform: translateY(-15px);
   }
   .banner_slide_pg .swiper-pagination-bullet {
-    background-color: #ffffff;
-    opacity: 0.6;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     width: 6px;
     height: 6px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    opacity: 0.6;
   }
   .banner_slide_pg .swiper-pagination-bullet-active {
-    background-color: #ffffff;
-    opacity: 1;
     width: 8px;
     height: 8px;
+    background-color: #ffffff;
+    opacity: 1;
   }
 }
