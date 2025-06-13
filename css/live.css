@@ -26,12 +26,131 @@
   /* 라이브 슬라이드 높이 455px */
   /* block 로 안만들어도 width 만 100% 이여도 괜찮은데? */
   display: block;
-  border: 1px solid #f0f0f0;
+  position: relative;
   width: 100%;
-  height: 455px;
-
-  background-color: aqua;
+  height: 35.156vw;
+  min-height: 286px;
+  /* height: 450px; */
+  max-height: 450px;
   border-radius: 11px;
+}
+
+.live_image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.live_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.live_image::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba(34, 34, 34, 0.5),
+      rgba(34, 34, 34, 0.5)
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.4) 18.65%, transparent 39.78%),
+    linear-gradient(180deg, transparent 56.75%, rgba(0, 0, 0, 0.4) 87.59%);
+  content: "";
+}
+
+.live_info {
+  padding: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.live_state {
+  display: flex;
+}
+.live_wait {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 16px;
+}
+.live_item_title {
+  display: -webkit-box;
+  padding: 5px 0;
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #fff;
+
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 보여줄 줄 수 */
+  text-overflow: ellipsis;
+}
+.live_day {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+}
+.live_day_date {
+  font-size: 28px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+}
+.live_day_time {
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+.live_detail {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 25px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+}
+/* div 태그 안에 이미지 넣어서 사이즈 조절하면 안찌그러짐 */
+.live_detail_image {
+  overflow: hidden;
+  width: 65px;
+  height: 65px;
+  border-radius: 6px;
+}
+
+.live_detail_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.live_detail_title {
+  flex: 1;
+  padding-top: 8px;
+
+  /* img 랑 p 태그 높이 같게해서 위쪽으로 붙임 */
+  /* padding-top 으로 살짝 내림 */
+  height: 65px;
+  font-size: 15px;
+  color: #fff;
 }
 
 .live_slide_prev {
@@ -95,4 +214,20 @@
   font-weight: 700;
   color: #333;
   border-radius: 28px;
+}
+
+@media all and (max-width: 1280px) {
+  
+}
+@media all and (max-width: 1080px) {
+
+}
+@media all and (max-width: 1024px) {
+
+}
+@media all and (max-width: 960px) {
+
+}
+@media all and (max-width: 760px) {
+
 }

@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
 
   // swiper 만들기 실행
   new Swiper(".sw_ticket", {
-    slidesPerView: 5,
+    slidesPerView: 3,
     spaceBetween: 20,
     slidesPerGroup: 1,
 

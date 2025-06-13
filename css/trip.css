@@ -37,14 +37,124 @@
 }
 
 .trip_slide_item {
+  display: block;
   /* a 태그라서 명시해야함 block로 */
   /* a 태그라서 width 도 해야함. 번거롭네 */
-  display: block;
-  border: 1px solid #f0f0f0;
+  position: relative;
   width: 100%;
-  height: 400px;
-  background-color: aqua;
-  border-radius: 11px;
+  height: 31.25vw;
+  max-height: 400px;
+}
+
+.trip_image {
+  overflow: hidden;
+  /* height: 245px; */
+  height: 61.25%;
+
+  /* 11시부터 시계방향 */
+  border-radius: 11px 11px 0 0;
+  /* max-height: 245px; */
+  /* height: 19.34vw; */
+}
+.trip_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trip_info {
+  padding: 20px 25px;
+  border: 1px solid #f0f0f0;
+  border-top: none;
+  position: relative;
+
+  height: 38.75%;
+  /* max-height: calc(100% - 245px); */
+  border-radius: 0 0 11px 11px;
+}
+
+.trip_icon {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  padding: 0px 10px;
+  position: absolute;
+  top: 0;
+  left: 16px;
+  height: 24px;
+
+  background: linear-gradient(
+    90deg,
+    #4ed8eb 0.08%,
+    #c9d8f4 21.6%,
+    #fbeaf0 42.04%,
+    #c0f3f3 65.17%,
+    #a9eeee 83.46%,
+    #5cf3dc 103.36%
+  );
+  font-size: 13px;
+  font-weight: 700;
+  color: #1c1c1c;
+  transform: translateY(-50%);
+  border-radius: 12px;
+}
+.trip_icon img {
+}
+
+.trip_itme_title {
+  display: -webkit-box;
+
+  /* 2 줄 말줄임 */
+  overflow: hidden;
+  font-size: 17px;
+  font-weight: 400;
+  /* 행간 */
+  /* 단위 없는 숫자는 font-size * 값 */
+  line-height: 1.3;
+  color: #1c1c1c;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.trip_schedule {
+  /* line-height: 3; */
+  /* 공백제거 */
+  display: flex;
+  padding: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* 가운데 점 넣기 */
+.trip_schedule span {
+  padding-right: 11px;
+  position: relative;
+}
+
+.trip_schedule span::before {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 2px;
+  height: 2px;
+  background-color: #868686;
+  content: "";
+  transform: translateX(-5px);
+}
+
+.trip_schedule span:last-child::before {
+  display: none;
+}
+
+.trip_price {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+}
+.trip_price b {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .trip_slide_prev {
@@ -113,3 +223,47 @@
 
 /* inline : a, img, h1 등 */
 /* inline 은 padding, margin 넣기 쉽지 않은데, img 는 예외 */
+
+/* 반응형 */
+@media all and (max-width: 1280px) {
+}
+
+@media all and (max-width: 1100px) {
+  .trip_info {
+    padding: 15px 25px;
+  }
+  .trip_schedule {
+    padding: 0;
+  }
+}
+
+@media all and (max-width: 1024px) {
+}
+
+@media all and (max-width: 990px) {
+  .trip_itme_title {
+    font-size: 17px;
+    line-height: 1.3;
+  }
+}
+
+@media all and (max-width: 960px) {
+  .trip_itme_title {
+    line-height: 1.6;
+    white-space: nowrap;
+  }
+}
+@media all and (max-width: 900px) {
+  .trip_slide_item {
+    height: 270px;
+  }
+  .trip_schedule {
+    overflow: hidden;
+  }
+  .trip_schedule span {
+    white-space: nowrap;
+  }
+}
+
+@media all and (max-width: 760px) {
+}
