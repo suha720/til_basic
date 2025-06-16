@@ -1,5 +1,6 @@
 .live {
   padding-top: 30px;
+  /* border-top: 8px solid #f0f4f4; */
 }
 
 .layout {
@@ -123,6 +124,7 @@
   gap: 10px;
   align-items: center;
   padding: 25px;
+  /* padding: 0 12px; */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -199,6 +201,7 @@
   display: flex;
   justify-content: center;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .live_more_bt {
@@ -217,17 +220,51 @@
 }
 
 @media all and (max-width: 1280px) {
-  
 }
 @media all and (max-width: 1080px) {
-
 }
 @media all and (max-width: 1024px) {
+  .live {
+    padding-top: 20px;
+    border-top: 8px solid #f0f4f4;
+  }
 
-}
-@media all and (max-width: 960px) {
+  .live_info {
+    padding: 10px;
+  }
+  .live_wait {
+    padding: 0 10px;
+    height: 20px;
+    font-size: 10px;
+    font-weight: 400;
+  }
 
-}
-@media all and (max-width: 760px) {
+  .live_item_title {
+    font-size: 14px;
+  }
+  .live_day_date {
+    font-size: 18px;
+  }
+  .live_day_time {
+    font-size: 32px;
+  }
 
+  .live_detail {
+    padding: 0 12px;
+  }
+
+  .live_detail_image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .live_detail_title {
+    padding-top: 16px;
+    font-size: 13px;
+  }
+  .live_more_bt {
+    justify-content: center;
+    width: 100%;
+    border-radius: 4px;
+  }
 }

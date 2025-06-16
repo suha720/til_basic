@@ -40,7 +40,7 @@
   gap: 6px;
 }
 .tour_button_list li {
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
 }
 .tour_button_list li button {
   padding: 0 18px;
@@ -50,6 +50,7 @@
   background-color: #fff;
   cursor: pointer;
   border-radius: 22px;
+  white-space: nowrap;
 }
 .tour_button_list li button:active {
   opacity: 0.65;
@@ -77,7 +78,7 @@
 .tour_item {
   display: block;
   overflow: hidden;
-  height: 365px;
+  /* height: 365px; */
   border-radius: 12px;
 }
 
@@ -199,8 +200,78 @@
 @media all and (max-width: 1280px) {
 }
 @media all and (max-width: 1024px) {
-  .tour_slide_wrap {
-    width: 1024px;
+  /* swiper-slide 를 건드리는 안좋은 코드 */
+  .tour {
+    border-top: 8px solid #f0f4f4;
+  }
+  .layout {
+    padding: 0 20px;
+    max-width: 760px;
+    overflow: hidden;
+  }
+  .tour_top {
+    padding-top: 10px;
+    padding-bottom: 13px;
+  }
+
+  .tour_top_title .title {
+    font-size: 20px;
+  }
+
+  .tour_button_list li button {
+    height: 38px;
+  }
+
+  .tour_top_title .subtitle {
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  /* swiper 소스 고친 트릭 */
+  .sw_tour {
+    overflow: visible !important;
+  }
+
+  /* 강제로 slide 너비를 교정 시킴 */
+  .sw_tour .swiper-slide {
+    width: 230px !important;
+  }
+  .tour_item {
+    /* height: 244px; */
+  }
+
+  .tour_item_image {
+    height: 138px;
+  }
+
+  .tour_item_info {
+    padding: 10px;
+    height: calc(100% - 138px);
+  }
+
+  .tour_item_info .tour_item_title {
+    font-size: 10px;
+  }
+  .tour_item_info .tour_sale {
+    padding-top: 10px;
+    overflow: hidden;
+    font-size: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  /* .tour_item .tour_item_title {
+  }
+ */
+  .tour_item_info .tour_price {
+    size: 14px;
+  }
+
+  .tour_item_info .tour_price b {
+    font-size: 15px;
+  }
+  .tour_slide_next, .tour_slide_prev {
+    display: none;
   }
 }
 @media all and (max-width: 960px) {

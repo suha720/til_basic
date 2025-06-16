@@ -16,7 +16,10 @@ window.addEventListener("DOMContentLoaded", function () {
   // 메인메뉴 a 태그들 : 여러 개
   const mainMenuA = document.querySelectorAll(".main_menu li a");
   // 멤버메뉴 a 태그들 : 여러 개
-  const memberMenuA = this.document.querySelectorAll(".member_menu li a");
+  const memberMenuA = document.querySelectorAll(".member_menu li a");
+
+  // 모바일 메뉴 참조
+  const mobileHeader = document.querySelector(".mobile_header");
 
   // 웹브라우저의 스크롤을 체크하겠다.
   window.addEventListener("scroll", function () {
@@ -37,6 +40,8 @@ window.addEventListener("DOMContentLoaded", function () {
       memberMenuA.forEach(function (item) {
         item.classList.add("height_62");
       });
+
+      mobileHeader.classList.add("mobile_scroll_line");
     } else {
       // console.log("스크롤 최상단!!!");
       headerTop.classList.remove("header_top_scroll");
@@ -51,6 +56,8 @@ window.addEventListener("DOMContentLoaded", function () {
       memberMenuA.forEach(function (item) {
         item.classList.remove("height_62");
       });
+
+      mobileHeader.classList.remove("mobile_scroll_line");
     }
   });
 });
