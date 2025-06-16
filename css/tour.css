@@ -273,6 +273,10 @@
   .tour_slide_next, .tour_slide_prev {
     display: none;
   }
+
+  .tour_more {
+    padding: 20px 0;
+  }
 }
 @media all and (max-width: 960px) {
 }
