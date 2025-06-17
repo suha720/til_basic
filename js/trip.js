@@ -145,6 +145,10 @@ window.addEventListener("load", function () {
   </div>
   `;
 
+  console.log("테스트");
+  console.log(tripPos);
+
+
   // 실제 데이터 개수 만큼 swiper-slide 태그 만들어 배치하기
   html = "";
   for (let i = 0; i < tripApiData.length; i++) {

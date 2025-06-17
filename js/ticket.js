@@ -2,108 +2,854 @@ window.addEventListener("load", () => {
   // 데이터
   const ticketApiData = [
     {
-      링크: "#",
-      이미지: "//ticketimage.interpark.com/Play/image/large/L0/L0000123_p.gif",
-      타이틀: "뮤지컬 <맘마미아!>",
-      장소: "LG아트센터 서울 LG SIGNATURE 홀",
-      공연기간: "2025.07.26 - 2025.10.25",
-      옵레: "단독판매",
-      옵블: "좌석우위",
+      카테고리: "뮤지컬",
+      데이터: [
+        {
+          uid: 1,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/L0/L0000123_p.gif",
+          랭킹: 1,
+          제목: "뮤지컬 <맘마미아!>",
+          날짜: "2025.07.26 - 2025.10.25",
+          장소: "LG아트센터 서울 LG SIGNATURE 홀",
+          옵션: [
+            { 스타일: "red", 텍스트: "단독판매" },
+            { 스타일: "blue", 텍스트: "좌석우위" },
+          ],
+        },
+
+        {
+          uid: 2,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25006845_p.gif",
+          랭킹: 2,
+          제목: "뮤지컬 〈등등곡〉",
+          날짜: "2025.06.24 - 2025.09.14",
+          장소: "예스24스테이지 1관",
+          옵션: [],
+        },
+
+        {
+          uid: 3,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25004150_p.gif",
+          랭킹: 3,
+          제목: "뮤지컬 〈사랑은 비를 타고 〉 30주년 공연",
+          날짜: "2025.04.29 - 2025.07.13",
+          장소: "백암아트홀",
+          옵션: [{ 스타일: "blue", 텍스트: "좌석우위" }],
+        },
+
+        {
+          uid: 4,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25007077_p.gif",
+          랭킹: 4,
+          제목: "뮤지컬 〈플레임즈〉",
+          날짜: "2025.06.26 - 2025.09.14",
+          장소: "SH아트홀",
+          옵션: [{ 스타일: "red", 텍스트: "단독판매" }],
+        },
+
+        {
+          uid: 5,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/P0/P0004249_p.gif",
+          랭킹: 5,
+          제목: "뮤지컬 〈팬텀〉 10주년 기념 공연",
+          날짜: "2025.05.31 - 2025.08.11",
+          장소: "세종문화회관 대극장",
+          옵션: [],
+        },
+
+        {
+          uid: 6,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25008211_p.gif",
+          랭킹: 6,
+          제목: "[NOL 스페셜 스테이지］ 뮤지컬 〈팬텀〉 10주년 기념 공연",
+          날짜: "2025.07.12 - 2025.07.17",
+          장소: "세종문화회관 대극장",
+          옵션: [{ 스타일: "red", 텍스트: "단독판매" }],
+        },
+
+        {
+          uid: 7,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25005777_p.gif",
+          랭킹: 7,
+          제목: "뮤지컬 〈위키드〉 내한 공연(WICKED The Musical)",
+          날짜: "2025.07.12 - 2025.10.26",
+          장소: "블루스퀘어 신한카드홀",
+          옵션: [{ 스타일: "blue", 텍스트: "좌석우위" }],
+        },
+      ],
+    },
+    {
+      카테고리: "콘서트",
+      데이터: [
+        {
+          uid: 1,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/L0/L0000123_p.gif",
+          랭킹: 1,
+          제목: "뮤지컬 <맘마미아!>",
+          날짜: "2025.07.26 - 2025.10.25",
+          장소: "LG아트센터 서울 LG SIGNATURE 홀",
+          옵션: [
+            { 스타일: "red", 텍스트: "단독판매" },
+            { 스타일: "blue", 텍스트: "좌석우위" },
+          ],
+        },
+
+        {
+          uid: 2,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25006845_p.gif",
+          랭킹: 2,
+          제목: "뮤지컬 〈등등곡〉",
+          날짜: "2025.06.24 - 2025.09.14",
+          장소: "예스24스테이지 1관",
+          옵션: [],
+        },
+
+        {
+          uid: 3,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25004150_p.gif",
+          랭킹: 3,
+          제목: "뮤지컬 〈사랑은 비를 타고 〉 30주년 공연",
+          날짜: "2025.04.29 - 2025.07.13",
+          장소: "백암아트홀",
+          옵션: [{ 스타일: "blue", 텍스트: "좌석우위" }],
+        },
+
+        {
+          uid: 4,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25007077_p.gif",
+          랭킹: 4,
+          제목: "뮤지컬 〈플레임즈〉",
+          날짜: "2025.06.26 - 2025.09.14",
+          장소: "SH아트홀",
+          옵션: [{ 스타일: "red", 텍스트: "단독판매" }],
+        },
+
+        {
+          uid: 5,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/P0/P0004249_p.gif",
+          랭킹: 5,
+          제목: "뮤지컬 〈팬텀〉 10주년 기념 공연",
+          날짜: "2025.05.31 - 2025.08.11",
+          장소: "세종문화회관 대극장",
+          옵션: [],
+        },
+
+        {
+          uid: 6,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25008211_p.gif",
+          랭킹: 6,
+          제목: "[NOL 스페셜 스테이지］ 뮤지컬 〈팬텀〉 10주년 기념 공연",
+          날짜: "2025.07.12 - 2025.07.17",
+          장소: "세종문화회관 대극장",
+          옵션: [{ 스타일: "red", 텍스트: "단독판매" }],
+        },
+
+        {
+          uid: 7,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25005777_p.gif",
+          랭킹: 7,
+          제목: "뮤지컬 〈위키드〉 내한 공연(WICKED The Musical)",
+          날짜: "2025.07.12 - 2025.10.26",
+          장소: "블루스퀘어 신한카드홀",
+          옵션: [{ 스타일: "blue", 텍스트: "좌석우위" }],
+        },
+      ],
+    },
+    {
+      카테고리: "스포츠",
+      데이터: [
+        {
+          uid: 1,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/L0/L0000123_p.gif",
+          랭킹: 1,
+          제목: "뮤지컬 <맘마미아!>",
+          날짜: "2025.07.26 - 2025.10.25",
+          장소: "LG아트센터 서울 LG SIGNATURE 홀",
+          옵션: [
+            { 스타일: "red", 텍스트: "단독판매" },
+            { 스타일: "blue", 텍스트: "좌석우위" },
+          ],
+        },
+
+        {
+          uid: 2,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25006845_p.gif",
+          랭킹: 2,
+          제목: "뮤지컬 〈등등곡〉",
+          날짜: "2025.06.24 - 2025.09.14",
+          장소: "예스24스테이지 1관",
+          옵션: [],
+        },
+
+        {
+          uid: 3,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25004150_p.gif",
+          랭킹: 3,
+          제목: "뮤지컬 〈사랑은 비를 타고 〉 30주년 공연",
+          날짜: "2025.04.29 - 2025.07.13",
+          장소: "백암아트홀",
+          옵션: [{ 스타일: "blue", 텍스트: "좌석우위" }],
+        },
+
+        {
+          uid: 4,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25007077_p.gif",
+          랭킹: 4,
+          제목: "뮤지컬 〈플레임즈〉",
+          날짜: "2025.06.26 - 2025.09.14",
+          장소: "SH아트홀",
+          옵션: [{ 스타일: "red", 텍스트: "단독판매" }],
+        },
+
+        {
+          uid: 5,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/P0/P0004249_p.gif",
+          랭킹: 5,
+          제목: "뮤지컬 〈팬텀〉 10주년 기념 공연",
+          날짜: "2025.05.31 - 2025.08.11",
+          장소: "세종문화회관 대극장",
+          옵션: [],
+        },
+
+        {
+          uid: 6,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25008211_p.gif",
+          랭킹: 6,
+          제목: "[NOL 스페셜 스테이지］ 뮤지컬 〈팬텀〉 10주년 기념 공연",
+          날짜: "2025.07.12 - 2025.07.17",
+          장소: "세종문화회관 대극장",
+          옵션: [{ 스타일: "red", 텍스트: "단독판매" }],
+        },
+
+        {
+          uid: 7,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25005777_p.gif",
+          랭킹: 7,
+          제목: "뮤지컬 〈위키드〉 내한 공연(WICKED The Musical)",
+          날짜: "2025.07.12 - 2025.10.26",
+          장소: "블루스퀘어 신한카드홀",
+          옵션: [{ 스타일: "blue", 텍스트: "좌석우위" }],
+        },
+      ],
     },
 
     {
-      링크: "#",
-      이미지: "//ticketimage.interpark.com/Play/image/large/25/25006845_p.gif",
-      타이틀: "뮤지컬 〈등등곡〉",
-      장소: "예스24스테이지 1관",
-      공연기간: "2025.06.24 - 2025.09.14",
-      옵레: "",
-      옵블: "",
+      카테고리: "전시/행사",
+      데이터: [
+        {
+          uid: 1,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/L0/L0000123_p.gif",
+          랭킹: 1,
+          제목: "뮤지컬 <맘마미아!>",
+          날짜: "2025.07.26 - 2025.10.25",
+          장소: "LG아트센터 서울 LG SIGNATURE 홀",
+          옵션: [
+            { 스타일: "red", 텍스트: "단독판매" },
+            { 스타일: "blue", 텍스트: "좌석우위" },
+          ],
+        },
+
+        {
+          uid: 2,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25006845_p.gif",
+          랭킹: 2,
+          제목: "뮤지컬 〈등등곡〉",
+          날짜: "2025.06.24 - 2025.09.14",
+          장소: "예스24스테이지 1관",
+          옵션: [],
+        },
+
+        {
+          uid: 3,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25004150_p.gif",
+          랭킹: 3,
+          제목: "뮤지컬 〈사랑은 비를 타고 〉 30주년 공연",
+          날짜: "2025.04.29 - 2025.07.13",
+          장소: "백암아트홀",
+          옵션: [{ 스타일: "blue", 텍스트: "좌석우위" }],
+        },
+
+        {
+          uid: 4,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25007077_p.gif",
+          랭킹: 4,
+          제목: "뮤지컬 〈플레임즈〉",
+          날짜: "2025.06.26 - 2025.09.14",
+          장소: "SH아트홀",
+          옵션: [{ 스타일: "red", 텍스트: "단독판매" }],
+        },
+
+        {
+          uid: 5,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/P0/P0004249_p.gif",
+          랭킹: 5,
+          제목: "뮤지컬 〈팬텀〉 10주년 기념 공연",
+          날짜: "2025.05.31 - 2025.08.11",
+          장소: "세종문화회관 대극장",
+          옵션: [],
+        },
+
+        {
+          uid: 6,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25008211_p.gif",
+          랭킹: 6,
+          제목: "[NOL 스페셜 스테이지］ 뮤지컬 〈팬텀〉 10주년 기념 공연",
+          날짜: "2025.07.12 - 2025.07.17",
+          장소: "세종문화회관 대극장",
+          옵션: [{ 스타일: "red", 텍스트: "단독판매" }],
+        },
+
+        {
+          uid: 7,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25005777_p.gif",
+          랭킹: 7,
+          제목: "뮤지컬 〈위키드〉 내한 공연(WICKED The Musical)",
+          날짜: "2025.07.12 - 2025.10.26",
+          장소: "블루스퀘어 신한카드홀",
+          옵션: [{ 스타일: "blue", 텍스트: "좌석우위" }],
+        },
+      ],
     },
 
     {
-      링크: "#",
-      이미지: "//ticketimage.interpark.com/Play/image/large/25/25004150_p.gif",
-      타이틀: "뮤지컬 〈사랑은 비를 타고 〉 30주년 공연",
-      장소: "백암아트홀",
-      공연기간: "2025.04.29 - 2025.07.13",
-      옵레: "",
-      옵블: "좌석우위",
+      카테고리: "클래식/무용",
+      데이터: [
+        {
+          uid: 1,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/L0/L0000123_p.gif",
+          랭킹: 1,
+          제목: "뮤지컬 <맘마미아!>",
+          날짜: "2025.07.26 - 2025.10.25",
+          장소: "LG아트센터 서울 LG SIGNATURE 홀",
+          옵션: [
+            { 스타일: "red", 텍스트: "단독판매" },
+            { 스타일: "blue", 텍스트: "좌석우위" },
+          ],
+        },
+
+        {
+          uid: 2,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25006845_p.gif",
+          랭킹: 2,
+          제목: "뮤지컬 〈등등곡〉",
+          날짜: "2025.06.24 - 2025.09.14",
+          장소: "예스24스테이지 1관",
+          옵션: [],
+        },
+
+        {
+          uid: 3,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25004150_p.gif",
+          랭킹: 3,
+          제목: "뮤지컬 〈사랑은 비를 타고 〉 30주년 공연",
+          날짜: "2025.04.29 - 2025.07.13",
+          장소: "백암아트홀",
+          옵션: [{ 스타일: "blue", 텍스트: "좌석우위" }],
+        },
+
+        {
+          uid: 4,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25007077_p.gif",
+          랭킹: 4,
+          제목: "뮤지컬 〈플레임즈〉",
+          날짜: "2025.06.26 - 2025.09.14",
+          장소: "SH아트홀",
+          옵션: [{ 스타일: "red", 텍스트: "단독판매" }],
+        },
+
+        {
+          uid: 5,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/P0/P0004249_p.gif",
+          랭킹: 5,
+          제목: "뮤지컬 〈팬텀〉 10주년 기념 공연",
+          날짜: "2025.05.31 - 2025.08.11",
+          장소: "세종문화회관 대극장",
+          옵션: [],
+        },
+
+        {
+          uid: 6,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25008211_p.gif",
+          랭킹: 6,
+          제목: "[NOL 스페셜 스테이지］ 뮤지컬 〈팬텀〉 10주년 기념 공연",
+          날짜: "2025.07.12 - 2025.07.17",
+          장소: "세종문화회관 대극장",
+          옵션: [{ 스타일: "red", 텍스트: "단독판매" }],
+        },
+
+        {
+          uid: 7,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25005777_p.gif",
+          랭킹: 7,
+          제목: "뮤지컬 〈위키드〉 내한 공연(WICKED The Musical)",
+          날짜: "2025.07.12 - 2025.10.26",
+          장소: "블루스퀘어 신한카드홀",
+          옵션: [{ 스타일: "blue", 텍스트: "좌석우위" }],
+        },
+      ],
     },
 
     {
-      링크: "#",
-      이미지: "//ticketimage.interpark.com/Play/image/large/25/25007077_p.gif",
-      타이틀: "뮤지컬 〈플레임즈〉",
-      장소: "SH아트홀",
-      공연기간: "2025.06.26 - 2025.09.14",
-      옵레: "단독판매",
-      옵블: "",
+      카테고리: "아동/가족",
+      데이터: [
+        {
+          uid: 1,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/L0/L0000123_p.gif",
+          랭킹: 1,
+          제목: "뮤지컬 <맘마미아!>",
+          날짜: "2025.07.26 - 2025.10.25",
+          장소: "LG아트센터 서울 LG SIGNATURE 홀",
+          옵션: [
+            { 스타일: "red", 텍스트: "단독판매" },
+            { 스타일: "blue", 텍스트: "좌석우위" },
+          ],
+        },
+
+        {
+          uid: 2,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25006845_p.gif",
+          랭킹: 2,
+          제목: "뮤지컬 〈등등곡〉",
+          날짜: "2025.06.24 - 2025.09.14",
+          장소: "예스24스테이지 1관",
+          옵션: [],
+        },
+
+        {
+          uid: 3,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25004150_p.gif",
+          랭킹: 3,
+          제목: "뮤지컬 〈사랑은 비를 타고 〉 30주년 공연",
+          날짜: "2025.04.29 - 2025.07.13",
+          장소: "백암아트홀",
+          옵션: [{ 스타일: "blue", 텍스트: "좌석우위" }],
+        },
+
+        {
+          uid: 4,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25007077_p.gif",
+          랭킹: 4,
+          제목: "뮤지컬 〈플레임즈〉",
+          날짜: "2025.06.26 - 2025.09.14",
+          장소: "SH아트홀",
+          옵션: [{ 스타일: "red", 텍스트: "단독판매" }],
+        },
+
+        {
+          uid: 5,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/P0/P0004249_p.gif",
+          랭킹: 5,
+          제목: "뮤지컬 〈팬텀〉 10주년 기념 공연",
+          날짜: "2025.05.31 - 2025.08.11",
+          장소: "세종문화회관 대극장",
+          옵션: [],
+        },
+
+        {
+          uid: 6,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25008211_p.gif",
+          랭킹: 6,
+          제목: "[NOL 스페셜 스테이지］ 뮤지컬 〈팬텀〉 10주년 기념 공연",
+          날짜: "2025.07.12 - 2025.07.17",
+          장소: "세종문화회관 대극장",
+          옵션: [{ 스타일: "red", 텍스트: "단독판매" }],
+        },
+
+        {
+          uid: 7,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25005777_p.gif",
+          랭킹: 7,
+          제목: "뮤지컬 〈위키드〉 내한 공연(WICKED The Musical)",
+          날짜: "2025.07.12 - 2025.10.26",
+          장소: "블루스퀘어 신한카드홀",
+          옵션: [{ 스타일: "blue", 텍스트: "좌석우위" }],
+        },
+      ],
+    },
+
+    {
+      카테고리: "무용",
+      데이터: [
+        {
+          uid: 1,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/L0/L0000123_p.gif",
+          랭킹: 1,
+          제목: "뮤지컬 <맘마미아!>",
+          날짜: "2025.07.26 - 2025.10.25",
+          장소: "LG아트센터 서울 LG SIGNATURE 홀",
+          옵션: [
+            { 스타일: "red", 텍스트: "단독판매" },
+            { 스타일: "blue", 텍스트: "좌석우위" },
+          ],
+        },
+
+        {
+          uid: 2,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25006845_p.gif",
+          랭킹: 2,
+          제목: "뮤지컬 〈등등곡〉",
+          날짜: "2025.06.24 - 2025.09.14",
+          장소: "예스24스테이지 1관",
+          옵션: [],
+        },
+
+        {
+          uid: 3,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25004150_p.gif",
+          랭킹: 3,
+          제목: "뮤지컬 〈사랑은 비를 타고 〉 30주년 공연",
+          날짜: "2025.04.29 - 2025.07.13",
+          장소: "백암아트홀",
+          옵션: [{ 스타일: "blue", 텍스트: "좌석우위" }],
+        },
+
+        {
+          uid: 4,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25007077_p.gif",
+          랭킹: 4,
+          제목: "뮤지컬 〈플레임즈〉",
+          날짜: "2025.06.26 - 2025.09.14",
+          장소: "SH아트홀",
+          옵션: [{ 스타일: "red", 텍스트: "단독판매" }],
+        },
+
+        {
+          uid: 5,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/P0/P0004249_p.gif",
+          랭킹: 5,
+          제목: "뮤지컬 〈팬텀〉 10주년 기념 공연",
+          날짜: "2025.05.31 - 2025.08.11",
+          장소: "세종문화회관 대극장",
+          옵션: [],
+        },
+
+        {
+          uid: 6,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25008211_p.gif",
+          랭킹: 6,
+          제목: "[NOL 스페셜 스테이지］ 뮤지컬 〈팬텀〉 10주년 기념 공연",
+          날짜: "2025.07.12 - 2025.07.17",
+          장소: "세종문화회관 대극장",
+          옵션: [{ 스타일: "red", 텍스트: "단독판매" }],
+        },
+
+        {
+          uid: 7,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25005777_p.gif",
+          랭킹: 7,
+          제목: "뮤지컬 〈위키드〉 내한 공연(WICKED The Musical)",
+          날짜: "2025.07.12 - 2025.10.26",
+          장소: "블루스퀘어 신한카드홀",
+          옵션: [{ 스타일: "blue", 텍스트: "좌석우위" }],
+        },
+      ],
+    },
+
+    {
+      카테고리: "레저/캠핑",
+      데이터: [
+        {
+          uid: 1,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/L0/L0000123_p.gif",
+          랭킹: 1,
+          제목: "뮤지컬 <맘마미아!>",
+          날짜: "2025.07.26 - 2025.10.25",
+          장소: "LG아트센터 서울 LG SIGNATURE 홀",
+          옵션: [
+            { 스타일: "red", 텍스트: "단독판매" },
+            { 스타일: "blue", 텍스트: "좌석우위" },
+          ],
+        },
+
+        {
+          uid: 2,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25006845_p.gif",
+          랭킹: 2,
+          제목: "뮤지컬 〈등등곡〉",
+          날짜: "2025.06.24 - 2025.09.14",
+          장소: "예스24스테이지 1관",
+          옵션: [],
+        },
+
+        {
+          uid: 3,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25004150_p.gif",
+          랭킹: 3,
+          제목: "뮤지컬 〈사랑은 비를 타고 〉 30주년 공연",
+          날짜: "2025.04.29 - 2025.07.13",
+          장소: "백암아트홀",
+          옵션: [{ 스타일: "blue", 텍스트: "좌석우위" }],
+        },
+
+        {
+          uid: 4,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25007077_p.gif",
+          랭킹: 4,
+          제목: "뮤지컬 〈플레임즈〉",
+          날짜: "2025.06.26 - 2025.09.14",
+          장소: "SH아트홀",
+          옵션: [{ 스타일: "red", 텍스트: "단독판매" }],
+        },
+
+        {
+          uid: 5,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/P0/P0004249_p.gif",
+          랭킹: 5,
+          제목: "뮤지컬 〈팬텀〉 10주년 기념 공연",
+          날짜: "2025.05.31 - 2025.08.11",
+          장소: "세종문화회관 대극장",
+          옵션: [],
+        },
+
+        {
+          uid: 6,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25008211_p.gif",
+          랭킹: 6,
+          제목: "[NOL 스페셜 스테이지］ 뮤지컬 〈팬텀〉 10주년 기념 공연",
+          날짜: "2025.07.12 - 2025.07.17",
+          장소: "세종문화회관 대극장",
+          옵션: [{ 스타일: "red", 텍스트: "단독판매" }],
+        },
+
+        {
+          uid: 7,
+          링크: "#",
+          이미지주소:
+            "//ticketimage.interpark.com/Play/image/large/25/25005777_p.gif",
+          랭킹: 7,
+          제목: "뮤지컬 〈위키드〉 내한 공연(WICKED The Musical)",
+          날짜: "2025.07.12 - 2025.10.26",
+          장소: "블루스퀘어 신한카드홀",
+          옵션: [{ 스타일: "blue", 텍스트: "좌석우위" }],
+        },
+      ],
     },
   ];
 
-  const ticketPos = document.querySelector(".sw_ticket .swiper-wrapper");
-  let html = `
-  <div class="swiper-slide">
-    <a href="#" class="ticket_slide_item">
-      <div class="ticket_image">
-        <img
-          src="//ticketimage.interpark.com/Play/image/large/L0/L0000123_p.gif"
-          alt="포스트"
-        />
-        <div class="ticket_rank">1</div>
-      </div>
-      <div class="ticket_info">
-        <p class="ticket_item_title">뮤지컬 <맘마미아!></p>
-        <p class="ticket_place">
-          LG아트센터 서울 LG SIGNATURE 홀
-        </p>
-        <p class="ticket_day">2025.07.26 ~ 2025.10.25</p>
-        <div class="ticket_option">
-          <span class="ticket_red">단독판매</span>
-          <span class="ticket_blue">좌석우위</span>
-        </div>
-      </div>
-    </a>
-  </div>
-  `;
+  // 카테고리 html 태그 만들기
+  // 카테고리 버튼 출력장소 및 출력하기
+
+  // let html = `
+  // <div class="swiper-slide">
+  //   <a href="#" class="ticket_slide_item">
+  //     <div class="ticket_image">
+  //       <img
+  //         src="//ticketimage.interpark.com/Play/image/large/L0/L0000123_p.gif"
+  //         alt="포스트"
+  //       />
+  //       <div class="ticket_rank">1</div>
+  //     </div>
+  //     <div class="ticket_info">
+  //       <p class="ticket_item_title">뮤지컬 <맘마미아!></p>
+  //       <p class="ticket_place">
+  //         LG아트센터 서울 LG SIGNATURE 홀
+  //       </p>
+  //       <p class="ticket_day">2025.07.26 ~ 2025.10.25</p>
+  //       <div class="ticket_option">
+  //         <span class="ticket_red">단독판매</span>
+  //         <span class="ticket_blue">좌석우위</span>
+  //       </div>
+  //     </div>
+  //   </a>
+  // </div>
+  // `;
 
   // 실제 데이터 개수 만큼 swiper-slide 태그 만들어 배치하기
-  html = "";
-  for (let i = 0; i < 8; i++) {
+
+  // html 태그 만들기
+  let btHtml = ``;
+  for (let i = 0; i < ticketApiData.length; i++) {
+    const tag = `<li class="ticket_nav_item">
+    <button class="ticket_header_btn">${ticketApiData[i].카테고리}</button>
+    </li>`;
+    btHtml += tag;
+  }
+
+  //   const btPos = document.querySelector(".ticket_nav li button");
+  //   btPos.innerHTML = btHtml;
+
+  //   // 포커스 스타일 추가하기
+  //   // 아래 숫자가 포커스 된 카테고리의 순서이다
+
+  //   let focusIndex = 0;
+  //   const btList = document.querySelectorAll("ticket_header_btn");
+  //   // focusIndex 번호의 button 태그에 클래스 추가
+  //   btList[focusIndex].classList.add("ticket_focus");
+
+  //   // 클릭시 포커스 이동하기
+  //   btList.forEach((item), index => {
+  //     item.addEventListener("click", () => {
+  //       focusIndex = index;
+  //       btList[focusIndex].classList.add("ticket_focus")
+  //     });
+  //   });
+
+  // // 포커스 리셋 및 최종 포커스 적용하기
+  // function resetBts() {
+  //   btList.forEach((item) => {
+  // item.classList.remove("ticket_focus")
+  //   })
+
+  //   btList[focusIndex].classList.add("focusIndex")
+  // }
+
+  // let html = ``;
+
+  // 태그 출력 장소 지정하기
+
+  let focusIndex = 0;
+
+  let html = ``;
+  for (let i = 0; i < ticketApiData[0].데이터.length; i++) {
+    // 임시 태그
     let tag = `
   <div class="swiper-slide">
-    <a href="${ticketApiData[0].링크}" class="ticket_slide_item">
+    <a href="${ticketApiData[0].데이터[i].링크}" class="ticket_slide_item">
       <div class="ticket_image">
         <img
-          src="${ticketApiData[0].이미지}"
-          alt="포스트"
+          src="${ticketApiData[0].데이터[i].이미지주소}"
+          alt="${ticketApiData[0].데이터[i].제목}"
         />
-        <div class="ticket_rank">1</div>
+        <div class="ticket_rank">${ticketApiData[0].데이터[i].랭킹}</div>
       </div>
       <div class="ticket_info">
-        <p class="ticket_item_title">${ticketApiData[0].타이틀}</p>
+        <p class="ticket_item_title">${ticketApiData[0].데이터[i].제목}</p>
         <p class="ticket_place">
-          ${ticketApiData[1].장소}
+          ${ticketApiData[0].데이터[i].장소}
         </p>
-        <p class="ticket_day">${ticketApiData[0].공연기간}</p>
-        <div class="ticket_option">
-          <span class="ticket_red">${ticketApiData[0].옵레}</span>
-          <span class="ticket_blue">${ticketApiData[0].옵블}</span>
-        </div>
+        <p class="ticket_day">${ticketApiData[0].데이터[i].날짜}</p>
+        <div class="ticket_option">`;
+
+    for (let j = 0; j < ticketApiData[0].데이터[i].옵션.length; j++) {
+      tag += `<span class="ticket_${ticketApiData[0].데이터[i].옵션[j].스타일}">${ticketApiData[0].데이터[i].옵션[j].텍스트}</span>`;
+    }
+
+    tag += `</div>
       </div>
     </a>
   </div>
     `;
 
-    html = html + tag;
+    html += tag;
   }
 
+  // 태그 출력 장소 지정하기
+  const ticketPos = document.querySelector(".sw_ticket .swiper-wrapper");
   ticketPos.innerHTML = html;
 
   const ticbts = document.querySelectorAll(".ticket_nav li button");
   console.log(ticbts);
-  ticbts.forEach(function (item) {
+  ticbts.forEach(function (item, index) {
     item.addEventListener("click", function () {
       removeFocus();
       //   console.log(ticbts);
