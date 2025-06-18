@@ -52,6 +52,9 @@ window.addEventListener("load", function () {
       startIndex = 0;
     }
     bannerAnchorTag.href = bannerApiData[startIndex].link;
+
+    console.log(`링크 확인용`,bannerApiData[startIndex].link);
+
     bannerImgTag.src = bannerApiData[startIndex].image;
     bannerImgTag.alt = bannerApiData[startIndex].title;
   }, 500);
