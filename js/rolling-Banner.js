@@ -48,12 +48,12 @@ window.addEventListener("load", function () {
   // 타이머 만들기
   let bannerTimer = setInterval(() => {
     startIndex += 1;
-    if (startIndex > totalCount) {
+    if (startIndex >= totalCount) {
       startIndex = 0;
     }
     bannerAnchorTag.href = bannerApiData[startIndex].link;
 
-    console.log(`링크 확인용`,bannerApiData[startIndex].link);
+    // console.log(`링크 확인용`,bannerApiData[startIndex].link);
 
     bannerImgTag.src = bannerApiData[startIndex].image;
     bannerImgTag.alt = bannerApiData[startIndex].title;

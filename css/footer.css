@@ -188,6 +188,7 @@
 
 /* 모바일 하단 */
 .mb_footer {
+  display: none;
   background-color: #f7f7f8;
   padding: 20px;
 }
@@ -213,6 +214,7 @@
   margin: 0 12px;
 }
 .mb_footer_info {
+  color: #7c7c86;
 }
 
 .mb_footer_link {
@@ -223,6 +225,7 @@
   padding: 15px;
   border-radius: 31px;
   height: 27px;
+  color: #7c7c86;
 }
 
 .circle {
@@ -239,19 +242,40 @@
   font-size: 10px;
   padding-top: 10px;
   padding-bottom: 60px;
+  color: #7c7c86;
 }
 
 .mb_footer_hide {
-  /* display: none; */
+  display: none;
+}
+
+/* js 에서 추가하도록 함 */
+.mb_footer_show {
+  display: block;
+  color: #7c7c86;
 }
 
 #mb_bt {
   display: flex;
   align-items: center;
   gap: 5px;
+  cursor: pointer;
+  color: #7c7c86;
 }
-#mb_bt i {}
+#mb_bt i {
+}
 
 #mb_bt i img {
-  transform: rotate(90deg);
+  transform: scale(0.7) rotate(90deg);
+}
+
+.img-up {
+  transform: scale(0.7) rotate(-90deg) !important;
+}
+
+/* 반응형 */
+@media all and (max-width: 1024px) {
+  .mb_footer {
+    display: block;
+  }
 }
