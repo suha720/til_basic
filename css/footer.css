@@ -252,6 +252,8 @@
 /* js 에서 추가하도록 함 */
 .mb_footer_show {
   display: block;
+}
+.mb_footer_show h3 {
   color: #7c7c86;
 }
 
