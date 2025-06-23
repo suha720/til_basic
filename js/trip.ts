@@ -1,6 +1,20 @@
+// Cannot find name 'Swiper'. Did you mean 'swiperS'?ts(2552)
+// trip.ts(205, 9): 'swiperS' is declared here.
+declare let Swiper: any;
+
 window.addEventListener("load", () => {
+  type tripDataType = {
+    링크: string;
+    이미지: string;
+    alt: string;
+    대상: string;
+    상품타이틀: string;
+    스케쥴: string[];
+    상품가격: string;
+    정상가: string;
+  };
   // 데이터
-  const tripApiData = [
+  const tripApiData: tripDataType[] = [
     {
       링크: "#",
       이미지:
@@ -105,7 +119,9 @@ window.addEventListener("load", () => {
   ];
 
   // html 태그 만들고 배치하기
-  const tripPos = document.querySelector(".sw_trip .swiper-wrapper");
+  const tripPos: Element | null = document.querySelector(
+    ".sw_trip .swiper-wrapper"
+  );
   let html = `
   <div class="swiper-slide">
     <a href="${tripApiData[0].링크}" class="trip_slide_item">
@@ -141,13 +157,12 @@ window.addEventListener("load", () => {
   </div>
   `;
 
-  console.log("테스트");
-  console.log(tripPos);
-
   // 실제 데이터 개수 만큼 swiper-slide 태그 만들어 배치하기
   html = "";
-  for (let i = 0; i < tripApiData.length; i++) {
-    let tag = `
+
+  function makeHtml() {
+    for (let i = 0; i < tripApiData.length; i++) {
+      let tag = `
   <div class="swiper-slide">
     <a href="${tripApiData[i].링크}" class="trip_slide_item">
       <div class="trip_image">
@@ -167,11 +182,11 @@ window.addEventListener("load", () => {
         <p class="trip_schedule">
         `;
 
-    for (let j = 0; j < tripApiData[i].스케쥴.length; j++) {
-      tag += `<span>${tripApiData[i].스케쥴[j]}</span>`;
-    }
+      for (let j = 0; j < tripApiData[i].스케쥴.length; j++) {
+        tag += `<span>${tripApiData[i].스케쥴[j]}</span>`;
+      }
 
-    tag += `</p>
+      tag += `</p>
 
         <p class="trip_price">
           <b>${tripApiData[i].상품가격}</b>
@@ -183,36 +198,41 @@ window.addEventListener("load", () => {
   </div>
     `;
 
-    html = html + tag;
+      html = html + tag;
+    }
+
+    // console.log("만들어진 태그 : ", html);
+
+    tripPos!.innerHTML = html;
   }
 
-  // console.log("만들어진 태그 : ", html);
-
-  tripPos.innerHTML = html;
-
-  
   // swiper 만들기 실행
-  new Swiper(".sw_trip", {
-    slidesPerView: 5,
-    spaceBetween: 10,
-    slidesPerGroup: 1,
-    navigation: {
-      nextEl: ".trip_slide_next",
-      prevEl: ".trip_slide_prev",
-    },
-    breakpoints: {
-      960: {
-        slidesPerView: 2,
-        spaceBetween: 20,
+  function makeSlide() {
+    new Swiper(".sw_trip", {
+      slidesPerView: 5,
+      spaceBetween: 10,
+      slidesPerGroup: 1,
+      navigation: {
+        nextEl: ".trip_slide_next",
+        prevEl: ".trip_slide_prev",
       },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 20,
+      breakpoints: {
+        960: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1280: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
       },
-      1280: {
-        slidesPerView: 4,
-        spaceBetween: 20,
-      },
-    },
-  });
+    });
+  }
+
+  makeHtml();
+  makeSlide();
 });

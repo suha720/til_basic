@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+window.addEventListener("load", (): void => {
   type BannerDataType = {
     uid: number;
     link: string;
@@ -37,11 +37,33 @@ window.addEventListener("load", function () {
   let startIndex: number = 0;
   let totalCount = bannerApiData.length;
 
-  // 타이머 만들기
-  let bannerTimer = setInterval(() => {
-    startIndex += 1;
+  // 배너 교환해 주는 기능
+  const changeBanner = () => {
+    let bannerTimer = setInterval(() => {
+      startIndex += 1;
 
-    //. 느낌표를 써라
+      //. 느낌표를 써라
+      if (startIndex > totalCount) {
+        startIndex = 0;
+      }
+      if (bannerAnchorTag) {
+        bannerAnchorTag.href = bannerApiData[startIndex].link;
+      }
+
+      console.log(`링크 확인용`, bannerApiData[startIndex].link);
+
+      bannerImgTag!.src = bannerApiData[startIndex].image;
+      bannerImgTag!.alt = bannerApiData[startIndex].title;
+    }, 500);
+  };
+
+  /*
+   *
+   * 배너가 변경되는 기능
+   * 사용법 : bannerChange()
+   *
+   */
+  const bannerChange = (): void => {
     if (startIndex > totalCount) {
       startIndex = 0;
     }
@@ -53,14 +75,17 @@ window.addEventListener("load", function () {
 
     bannerImgTag!.src = bannerApiData[startIndex].image;
     bannerImgTag!.alt = bannerApiData[startIndex].title;
-  }, 500);
+  };
+
+  // 타이머 만들기
+  let bannerTimer = setInterval(bannerChange, 500);
 
   // 마우스 커서 배너 제어하기
-  bannerAnchorTag!.addEventListener("mouseenter", () => {
+  bannerAnchorTag!.addEventListener("mouseenter", (): void => {
     // 배너 타이머 지우기
     clearInterval(bannerTimer);
   });
-  bannerAnchorTag!.addEventListener("mouseleave", () => {
+  bannerAnchorTag!.addEventListener("mouseleave", (): void => {
     // 배너 타이머 다시 실행
     bannerTimer = setInterval(() => {
       startIndex += 1;
