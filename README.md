@@ -1015,3 +1015,116 @@ window.addEventListener("load", () => {
   - git remote remove origin : 온라인 주소 삭제
   - git remote -v : 삭제가 된지 안된지 확인하기
   - 새로운 레퍼지토리에서 주소 복사하기
+
+# 7. scss
+
+## 7.1. VSCode 컴파일 플러그인 설치
+
+- `Live Sass Compiler` 설치
+
+## 7.2. 실습 환경
+
+- `scss 폴더 만들기`
+- `scss 폴더/test.scss 파일` 만들기
+- 반드시 VSCode 의 하단 바에 `Watch Sass` 를 `Watching...` 으로
+- `Watch Sass` 를 클릭하면 `Watching...` 으로 변함
+
+## 7.3. 환경 세팅
+
+- 파일명.scss 는 `scss 폴더`에 보관
+- 파일명.css 는 `css 폴더`에 보관
+
+### 환경 설정
+
+-`Settings 메뉴` 선택
+![Image](https://github.com/user-attachments/assets/38757ebb-2d47-4320-b931-6f4e54e0bd12)
+![Image](https://github.com/user-attachments/assets/1056ccbd-c5f3-4988-8465-39edab012281)
+![Image](https://github.com/user-attachments/assets/38eb1512-8b52-438a-b51c-a9972f841b9d)
+
+- 다음의 코드를 추가한다.
+
+```json
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css",
+      "savePathReplacementPairs": null
+    }
+  ]
+
+```
+
+## 7.4. 기초 문법
+
+- 참조 : https://www.heropy.dev/p/Y7OrPe
+- 중첩(Nesting)
+
+```scss
+// 중첩 (Nesting)
+.card {
+  border: 1px solid #000;
+  .title {
+    position: relative;
+    font-weight: 700;
+    &:hover {
+      color: blue;
+    }
+    &:active {
+      color: aqua;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background-color: red;
+      left: 0;
+      top: o;
+    }
+  }
+  .content {
+    color: orange;
+    button {
+      border: 1px solid cyan;
+      &:hover {
+        background-color: red;
+      }
+    }
+  }
+}
+```
+
+```css
+.card {
+  border: 1px solid #000;
+}
+.card .title {
+  position: relative;
+  font-weight: 700;
+}
+.card .title:hover {
+  color: blue;
+}
+.card .title:active {
+  color: aqua;
+}
+.card .title::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: red;
+  left: 0;
+  top: o;
+}
+.card .content {
+  color: orange;
+}
+.card .content button {
+  border: 1px solid cyan;
+}
+.card .content button:hover {
+  background-color: red;
+} /*# sourceMappingURL=test.css.map */
+```
