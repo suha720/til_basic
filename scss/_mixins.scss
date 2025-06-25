@@ -1,0 +1,10 @@
+// 함수 사용하기
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin border-fn($cc) {
+    border: 1px solid $cc;
+}

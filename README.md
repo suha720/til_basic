@@ -1060,6 +1060,8 @@ window.addEventListener("load", () => {
 - 참조 : https://www.heropy.dev/p/Y7OrPe
 - 중첩(Nesting)
 
+### 7.4.1. 중첩(Nesting)
+
 ```scss
 // 중첩 (Nesting)
 .card {
@@ -1127,4 +1129,94 @@ window.addEventListener("load", () => {
 .card .content button:hover {
   background-color: red;
 } /*# sourceMappingURL=test.css.map */
+```
+
+### 7.4.2. 변수
+
+```scss
+// 변수 만들기
+$width-screen: 960px;
+$pc-w: 760px;
+
+.wrap {
+  position: relative;
+  // 변수 사용하기
+  width: $width-screen;
+  .header {
+    width: $width-screen;
+    .header_top {
+      width: $pc-w;
+    }
+  }
+  .main {
+    width: $width-screen;
+  }
+  .footer {
+    width: $width-screen;
+  }
+}
+```
+
+### 7.4.3. 변수를 모으고 다른 scss 에서 사용하기 
+- `css 로 생성할 필요가 없는` 경우 `_파일명.scss` 생성
+  - @import 할 때는 `_` 붙이지마! ex) @import "val";
+- scss 폴더에 `val.scss` 파일 만듦.(파일명은 자유)
+
+
+```scss
+$width-screen: 1280;
+$pc-w: 760px;
+```
+
+- 변수 사용시 `@import "val";` `_` 반드시 제거하고 파일명만 적자
+```scss
+@import "val";
+
+.wrap {
+  position: relative;
+  // 변수 사용하기
+  width: $width-screen;
+  .header {
+    width: $width-screen;
+    .header_top {
+      width: $pc-w;
+    }
+  }
+}
+```
+
+### 7.4.4. 함수(Mixins) 사용하기
+- 파일명을 `_` 를 활용하자. (`scss/_mixins.scss`)
+- 아래처럼 불러들임
+
+```scss
+@import "val";
+@import "mixins";
+```
+
+- 함수 사용하기
+```scss
+// 함수 사용하기
+// 파일명 mixins.scss 임
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin border-fn($cc) {
+    border: 1px solid $cc;
+}
+```
+- 함수 적용하기
+```scss
+@import "val";
+@import "mixins";
+
+width: $width-screen;
+    .header_top {
+      width: $pc-w;
+      height: 100px;
+      @include border-fn(#333)
+    }
 ```
