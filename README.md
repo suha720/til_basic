@@ -1220,3 +1220,6 @@ width: $width-screen;
       @include border-fn(#333)
     }
 ```
+
+# 8. 파비콘 및 아이콘 만들기
+- https://realfavicongenerator.net/
