@@ -1157,11 +1157,11 @@ $pc-w: 760px;
 }
 ```
 
-### 7.4.3. 변수를 모으고 다른 scss 에서 사용하기 
+### 7.4.3. 변수를 모으고 다른 scss 에서 사용하기
+
 - `css 로 생성할 필요가 없는` 경우 `_파일명.scss` 생성
   - @import 할 때는 `_` 붙이지마! ex) @import "val";
 - scss 폴더에 `val.scss` 파일 만듦.(파일명은 자유)
-
 
 ```scss
 $width-screen: 1280;
@@ -1169,6 +1169,7 @@ $pc-w: 760px;
 ```
 
 - 변수 사용시 `@import "val";` `_` 반드시 제거하고 파일명만 적자
+
 ```scss
 @import "val";
 
@@ -1186,6 +1187,7 @@ $pc-w: 760px;
 ```
 
 ### 7.4.4. 함수(Mixins) 사용하기
+
 - 파일명을 `_` 를 활용하자. (`scss/_mixins.scss`)
 - 아래처럼 불러들임
 
@@ -1195,31 +1197,85 @@ $pc-w: 760px;
 ```
 
 - 함수 사용하기
+
 ```scss
 // 함수 사용하기
 // 파일명 mixins.scss 임
 @mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin border-fn($cc) {
-    border: 1px solid $cc;
+  border: 1px solid $cc;
 }
 ```
+
 - 함수 적용하기
+
 ```scss
 @import "val";
 @import "mixins";
 
 width: $width-screen;
-    .header_top {
-      width: $pc-w;
-      height: 100px;
-      @include border-fn(#333)
-    }
+.header_top {
+  width: $pc-w;
+  height: 100px;
+  @include border-fn(#333);
+}
 ```
 
 # 8. 파비콘 및 아이콘 만들기
+
 - https://realfavicongenerator.net/
+
+# 9. SEO
+
+- Search Engine Optimization : 검색 엔진 최적화
+- 구글, 네이버 : 검색어를 입력시 관련 순위로 목록 제시함.
+
+## 9.1. 기본적인 SEO 작성 목록
+
+- `<title></title>` : 고정된 글자. 검색 결과 타이틀
+- `<meta name="description" content="서비스 설명" />` : 요약 설명, 검색 결과 내용
+- `<meta name="keyword" content="키워드" />` : 핵심 키워드
+- `<meta property="og:title" content="제목" />` : SNS 공유시 표현 제목
+- `<meta property="og:description" content="서비스 설명" />` : SNS 공유시 설명
+- `<meta property="og:image" content="https~" />` : 미리보기 이미지 url
+
+## 9.2. 검색 엔진 로봇 을 위한 설정
+
+- `robots.txt` 파일 생성
+
+```txt
+User-agent: *
+Allow: /
+Sitemap: https://til-basic-cyan.vercel.app/sitemap.xml
+```
+
+- `sitemap.xml` 파일 생성(기본 구조)
+
+```xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://til-basic-cyan.vercel.app</loc>
+        <lastmod>2025-06-27</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://til-basic-cyan.vercel.app/ceo</loc>
+        <lastmod>2025-06-27</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.0</priority>
+    </url>
+
+</urlset>
+```
+
+## 9.3. 네이버와 구글 검색엔진 등록해 보기
