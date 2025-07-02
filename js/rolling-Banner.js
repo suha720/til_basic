@@ -34,8 +34,8 @@ window.addEventListener("load", function () {
   const bannerAnchorTag = document.querySelector(".sale");
   const bannerImgTag = document.querySelector(".sale img");
   // 롤링 작동하기
-  console.log("링크주소 : ", bannerAnchorTag.href);
-  console.log("이미지경로 : ", bannerImgTag.src);
+  // console.log("링크주소 : ", bannerAnchorTag.href);
+  // console.log("이미지경로 : ", bannerImgTag.src);
 
   bannerAnchorTag.href = bannerApiData[0].link;
   bannerImgTag.src = bannerApiData[0].image;

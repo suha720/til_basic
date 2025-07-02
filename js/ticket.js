@@ -848,7 +848,7 @@ window.addEventListener("load", () => {
   ticketPos.innerHTML = html;
 
   const ticbts = document.querySelectorAll(".ticket_nav li button");
-  console.log(ticbts);
+  // console.log(ticbts);
   ticbts.forEach(function (item, index) {
     item.addEventListener("click", function () {
       removeFocus();

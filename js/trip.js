@@ -141,8 +141,8 @@ window.addEventListener("load", () => {
   </div>
   `;
 
-  console.log("테스트");
-  console.log(tripPos);
+  // console.log("테스트");
+  // console.log(tripPos);
 
   // 실제 데이터 개수 만큼 swiper-slide 태그 만들어 배치하기
   html = "";

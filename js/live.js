@@ -213,7 +213,7 @@ window.addEventListener("load", () => {
   }
   testPos.innerHTML = html;
 
-  console.log(testPos);
+  // console.log(testPos);
 
   // livePos.innerHTML = html;
 

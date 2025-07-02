@@ -21,8 +21,8 @@ window.addEventListener("load", (): void => {
   const bannerImgTag: HTMLImageElement | null =
     document.querySelector(".sale img");
   // 롤링 작동하기
-  console.log("링크주소 : ", bannerAnchorTag?.href);
-  console.log("이미지경로 : ", bannerImgTag?.src);
+  // console.log("링크주소 : ", bannerAnchorTag?.href);
+  // console.log("이미지경로 : ", bannerImgTag?.src);
 
   // 방어 코드
   if (bannerAnchorTag) {
@@ -50,7 +50,7 @@ window.addEventListener("load", (): void => {
         bannerAnchorTag.href = bannerApiData[startIndex].link;
       }
 
-      console.log(`링크 확인용`, bannerApiData[startIndex].link);
+      // console.log(`링크 확인용`, bannerApiData[startIndex].link);
 
       bannerImgTag!.src = bannerApiData[startIndex].image;
       bannerImgTag!.alt = bannerApiData[startIndex].title;
@@ -71,7 +71,7 @@ window.addEventListener("load", (): void => {
       bannerAnchorTag.href = bannerApiData[startIndex].link;
     }
 
-    console.log(`링크 확인용`, bannerApiData[startIndex].link);
+    // console.log(`링크 확인용`, bannerApiData[startIndex].link);
 
     bannerImgTag!.src = bannerApiData[startIndex].image;
     bannerImgTag!.alt = bannerApiData[startIndex].title;

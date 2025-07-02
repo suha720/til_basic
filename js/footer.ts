@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".mb_footer_hide");
   // 아이콘 이미지
   const arrowImg: Element | null = document.querySelector("#mb_bt i img");
-  console.log(`이미지 버튼 확인용 ${arrowImg}`);
+  // console.log(`이미지 버튼 확인용 ${arrowImg}`);
 
   // 버튼 클릭 확인 코드
   mb_bt!.addEventListener("click", () => {
@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
   function showHideMenu() {
     if (isOpen) {
       // 펼치기
-      console.log(isOpen);
+      // console.log(isOpen);
       arrowImg!.classList.add("img-up");
       for (let item of hideTarget) {
         item.classList.add("mb_footer_show");
