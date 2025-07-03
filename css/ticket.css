@@ -120,6 +120,9 @@
 }
 
 .ticket_item_title {
+  /* 밑에 코드는 그냥 1줄말 줄임이 보기 좋아서 넣었음, 기본은 2줄 말줄임인걸 명심하셈 */
+  white-space: nowrap;
+
   display: -webkit-box;
 
   /* 2줄 제한 */

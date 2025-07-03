@@ -26,6 +26,7 @@
 .live_slide_item {
   /* 라이브 슬라이드 높이 455px */
   /* block 로 안만들어도 width 만 100% 이여도 괜찮은데? */
+  overflow: hidden;
   display: block;
   position: relative;
   width: 100%;
